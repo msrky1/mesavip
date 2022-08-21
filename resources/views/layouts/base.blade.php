@@ -1,88 +1,250 @@
-<!doctype html>
-<html class="no-js" lang="tr">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukon</title>
+    <link rel="shortcut icon" href="{{asset('assets')}}/assets/images/x-icon.png" type="image/x-icon">
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/icofont.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/swiper.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/lightcase.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
+</head>
+<body>
 
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <!-- Author -->
-    <meta name="author" content="Akıl Treni Koleji">
-    <!-- description -->
-    <meta name="description" content="Akıl Treni Koleji">
-    <!-- keywords -->
+    <!-- preloader start here -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <meta name="keywords" content="Akıl Treni Koleji">
-    <!-- Page Title -->
-    <title>Akıl Treni Koleji</title>
-    <link href="{{asset('assets')}}/kids//images/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/bundle.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css/tooltipster.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/revolution-settings.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css/revolution/navigation.css">
-    <link href="{{asset('assets')}}/css/LineIcons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css/custom.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css/style.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css2.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/kids/css.css">
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
-
-   @livewireStyles
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="icofont-rounded-up"></i></a>
+    <!-- scrollToTop ending here -->
     
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-area">
+                    <ul class="lab-ul left">
+                        <li>
+                            <i class="icofont-ui-call"></i> <span>+800-123-4567 6587</span>
+                        </li>
+                        <li>
+                            <i class="icofont-location-pin"></i> Beverley, New York 224 USA
+                        </li>
+                    </ul>
+                    <ul class="lab-ul social-icons d-flex align-items-center">
+                        <li><p>Find us on : </p></li>
+                        <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
+                        <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
+                        <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
+                        <li><a href="#" class="rss"><i class="icofont-rss-feed"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+                    </div>
+                    <div class="menu-area">
+                        <div class="menu">
+                            <ul class="lab-ul">
+                                <li>
+                                    <a href="#0">Home</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="index.html" class="active">Home One</a></li>
+                                        <li><a href="index-2.html">Home Two</a></li>
+                                        <li><a href="index-3.html">Home Three</a></li>
+                                        <li><a href="index-4.html">Home Four</a></li>
+                                        <li><a href="index-5.html">Home Five</a></li>
+                                        <li><a href="index-6.html">Home Six</a></li>
+                                        <li><a href="index-7.html">Home Seven</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <a href="#0">Courses</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="course.html">Course</a></li>
+                                        <li><a href="course-single.html">Course Details</a></li>
+    
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#0">Blog</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="blog.html">Blog Grid</a></li>
+                                        <li><a href="blog-2.html">Blog Style 2</a></li>
+                                        <li><a href="blog-3.html">Blog Style 3</a></li>
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#0">Pages</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="instructor.html">Instructor</a></li>
+                                        <li>
+                                            <a href="#0">Shop Pages</a>
+                                            <ul class="lab-ul">
+                                                <li><a href="shop.html">Shop Page</a></li>
+                                                <li><a href="shop-single.html">Shop Details Page</a></li>
+                                                <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="search-page.html">Search Page</a></li>
+                                        <li><a href="search-none.html">Search None</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="login.html" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
+                        <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
+
+                        <!-- toggle icons -->
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="ellepsis-bar d-lg-none">
+                            <i class="icofont-info-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{$slot}}
 
 
-    </head>
+       <!-- Footer Section Start Here -->
+       <footer>
+        <div class="footer-top padding-tb pt-0">
+            <div class="container">
+                <div class="row g-4 row-cols-xl-4 row-cols-md-2 row-cols-1 justify-content-center">
+                    <div class="col">
+                        <div class="footer-item">
+                            <div class="footer-inner">
+                                <div class="footer-content">
+                                    <div class="title">
+                                        <h4>Site Map</h4>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="lab-ul">
+                                            <li><a href="#">Documentation</a></li>
+                                            <li><a href="#">Feedback</a></li>
+                                            <li><a href="#">Plugins</a></li>
+                                            <li><a href="#">Support Forums</a></li>
+                                            <li><a href="#">Themes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <div class="footer-inner">
+                                <div class="footer-content">
+                                    <div class="title">
+                                        <h4>Useful Links</h4>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="lab-ul">
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Help Link</a></li>
+                                            <li><a href="#">Terms & Conditions</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <div class="footer-inner">
+                                <div class="footer-content">
+                                    <div class="title">
+                                        <h4>Social Contact</h4>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="lab-ul">
+                                            <li><a href="#">Facebook</a></li>
+                                            <li><a href="#">Twitter</a></li>
+                                            <li><a href="#">Instagram</a></li>
+                                            <li><a href="#">YouTube</a></li>
+                                            <li><a href="#">Github</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-item">
+                            <div class="footer-inner">
+                                <div class="footer-content">
+                                    <div class="title">
+                                        <h4>Our Support</h4>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="lab-ul">
+                                            <li><a href="#">Help Center</a></li>
+                                            <li><a href="#">Paid with Mollie</a></li>
+                                            <li><a href="#">Status</a></li>
+                                            <li><a href="#">Changelog</a></li>
+                                            <li><a href="#">Contact Support</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom style-2">
+            <div class="container">
+                <div class="section-wrapper">
+                    <p>&copy; 2021 <a href="index.html">Edukon</a> Designed by <a href="https://themeforest.net/user/CodexCoder" target="_blank">CodexCoder</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Ending Here -->
+</div>
+<!-- footer -->
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="90">
 
+<script src="{{asset('assets')}}/js/jquery.js"></script>
+<script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
+<script src="{{asset('assets')}}/js/swiper.min.js"></script>
+<script src="{{asset('assets')}}/js/progress.js"></script>
+<script src="{{asset('assets')}}/js/lightcase.js"></script>
+<script src="{{asset('assets')}}/js/counter-up.js"></script>
+<script src="{{asset('assets')}}/js/isotope.pkgd.js"></script>
+<script src="{{asset('assets')}}/js/functions.js"></script>
 
-        <livewire:project.menu-component /> 
-       
-        <!-- Header Area End Here -->
-
-{{ $slot }}
-
-@livewireScripts
- <livewire:project.footer-component /> 
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="{{asset('assets')}}/js/bundle.min.js"></script>
-<!--to view items on reach-->
-<script src="{{asset('assets')}}/js/jquery.appear.js"></script>
-<!--Owl Slider-->
-<script src="{{asset('assets')}}/js/owl.carousel.min.js"></script>
-<!--Parallax Background-->
-<script src="{{asset('assets')}}/js/parallaxie.min.js"></script>
-<!--Cubefolio Gallery-->
-<script src="{{asset('assets')}}/js/jquery.cubeportfolio.min.js"></script>
-<!--Fancybox js-->
-<script src="{{asset('assets')}}/js/jquery.fancybox.min.js"></script>
-<!--wow js-->
-<script src="{{asset('assets')}}/js/wow.min.js"></script>
-<!--number counters-->
-<script src="{{asset('assets')}}/kids//js/jquery-countTo.js"></script>
-<!--tooltip js-->
-<script src="{{asset('assets')}}/kids//js/tooltipster.min.js"></script>
-{{-- <script src="{{asset('assets')}}/js/slider.js"></script> --}}
-<!-- REVOLUTION JS FILES -->
-<script src="{{asset('assets')}}/js/jquery.themepunch.tools.min.js"></script>
-<script src="{{asset('assets')}}/js/jquery.themepunch.revolution.min.js"></script>
-<!-- SLIDER REVOLUTION EXTENSIONS -->
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="{{asset('assets')}}/js/extensions/revolution.extension.video.min.js"></script>
-<!--custom functions and script-->
-<script src="{{asset('assets')}}/kids//js/functions.js"></script>
-       
-    </body>
-
+</body>
 </html>
