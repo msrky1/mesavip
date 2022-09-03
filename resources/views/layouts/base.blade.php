@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edukon</title>
-    <link rel="shortcut icon" href="{{asset('assets')}}/assets/images/x-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('assets')}}/{{asset('assets')}}/images/x-icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="{{asset('assets')}}/css/animate.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+                        <a href="index.html"><img src="{{asset('assets')}}/images/logo/01.png" alt="logo"></a>
                     </div>
                     <div class="menu-area">
                         <div class="menu">
