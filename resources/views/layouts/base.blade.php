@@ -63,42 +63,41 @@
                         <div class="menu">
                             <ul class="lab-ul">
                                 <li>
-                                    <a href="#0">Home</a>
-                                    <ul class="lab-ul">
+                                    <a href="#0">Anasayfa</a>
+                                    {{-- <ul class="lab-ul">
                                         <li><a href="index.html" class="active">Home One</a></li>
-                                        <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-3.html">Home Three</a></li>
-                                        <li><a href="index-4.html">Home Four</a></li>
-                                        <li><a href="index-5.html">Home Five</a></li>
-                                        <li><a href="index-6.html">Home Six</a></li>
-                                        <li><a href="index-7.html">Home Seven</a></li>
-                                    </ul>
+                                      
+                                    </ul> --}}
                                 </li>
                                 
                                 <li>
-                                    <a href="#0">Courses</a>
+                                    <a href="#0">Kurumsal</a>
                                     <ul class="lab-ul">
-                                        <li><a href="course.html">Course</a></li>
-                                        <li><a href="course-single.html">Course Details</a></li>
+                                        <li><a href="course.html">Kadromuz</a></li>
+                                        <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
+                                        <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
+                                        <li><a href="course-single.html">İnsan Kaynakları</a></li>
+                                        <li><a href="course-single.html">Belge ve Sertifikalarımız</a></li>
     
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#0">Blog</a>
+                                    <a href="#0">Eğitim Birimleri</a>
                                     <ul class="lab-ul">
-                                        <li><a href="blog.html">Blog Grid</a></li>
-                                        <li><a href="blog-2.html">Blog Style 2</a></li>
-                                        <li><a href="blog-3.html">Blog Style 3</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                        <li><a href="blog.html">Anaokulu</a></li>
+                                        <li><a href="blog-2.html">İlkokkul</a></li>
+                                        <li><a href="blog-3.html">Ortaokul</a></li>
+                                        <li><a href="blog-single.html">Fen Lisesi ve Anadolu Lisesi</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#0">Pages</a>
+                                    <a href="#0">Eğitim Sistemleri</a>
                                     <ul class="lab-ul">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="instructor.html">Instructor</a></li>
-                                        <li>
+                                        <li><a href="about.html">Eğitim Koçluğu</a></li>
+                                        <li><a href="team.html">Mesa Vip Eğitim Sistemi</a></li>
+                                        <li><a href="instructor.html">Yabancı Dil Eğitimi</a></li>
+                                        <li><a href="instructor.html">Yetenek Haritası</a></li>
+                                        {{-- <li>
                                             <a href="#0">Shop Pages</a>
                                             <ul class="lab-ul">
                                                 <li><a href="shop.html">Shop Page</a></li>
@@ -108,15 +107,55 @@
                                         </li>
                                         <li><a href="search-page.html">Search Page</a></li>
                                         <li><a href="search-none.html">Search None</a></li>
-                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="404.html">404</a></li> --}}
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li>
+                                    <a href="#0">Duyurular</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="about.html">Bizden Haberler</a></li>
+                                        <li><a href="team.html">Basında Biz</a></li>
+                                        <li><a href="instructor.html">Deneme Sınavları</a></li>
+                                        <li><a href="instructor.html">Sınav Takvimi</a></li>
+                                        {{-- <li>
+                                            <a href="#0">Shop Pages</a>
+                                            <ul class="lab-ul">
+                                                <li><a href="shop.html">Shop Page</a></li>
+                                                <li><a href="shop-single.html">Shop Details Page</a></li>
+                                                <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="search-page.html">Search Page</a></li>
+                                        <li><a href="search-none.html">Search None</a></li>
+                                        <li><a href="404.html">404</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#0">Sosyal Etkinlikler</a>
+                                    <ul class="lab-ul">
+                                        <li><a href="about.html">Sportif Faaliyetler</a></li>
+                                        <li><a href="team.html">Bilim ve Oyun Kulüpleri</a></li>
+                                        <li><a href="instructor.html">Kültür ve Sanat</a></li>
+                                        {{-- <li>
+                                            <a href="#0">Shop Pages</a>
+                                            <ul class="lab-ul">
+                                                <li><a href="shop.html">Shop Page</a></li>
+                                                <li><a href="shop-single.html">Shop Details Page</a></li>
+                                                <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="search-page.html">Search Page</a></li>
+                                        <li><a href="search-none.html">Search None</a></li>
+                                        <li><a href="404.html">404</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Galeri</a></li>
+                                <li><a href="contact.html">İletişim</a></li>
                             </ul>
                         </div>
                         
-                        <a href="login.html" class="login"><i class="icofont-user"></i> <span>LOG IN</span> </a>
-                        <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>SIGN UP</span> </a>
+                        <a href="login.html" class="login"><i class="icofont-user"></i> <span>Ara</span> </a>
+                        <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>Harita</span> </a>
 
                         <!-- toggle icons -->
                         <div class="header-bar d-lg-none">
@@ -227,7 +266,7 @@
         <div class="footer-bottom style-2">
             <div class="container">
                 <div class="section-wrapper">
-                    <p>&copy; 2021 <a href="index.html">Edukon</a> Designed by <a href="https://themeforest.net/user/CodexCoder" target="_blank">CodexCoder</a> </p>
+                    <p>&copy; 2022 <a href="/">Mahmut Sarıkaya</a>  </p>
                 </div>
             </div>
         </div>
