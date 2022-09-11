@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edukon</title>
+    <title>Mesa Vip Eğitim Kurumları</title>
     <link rel="shortcut icon" href="{{asset('assets')}}/{{asset('assets')}}/images/x-icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="{{asset('assets')}}/css/animate.css">
@@ -36,14 +36,14 @@
                 <div class="header-top-area">
                     <ul class="lab-ul left">
                         <li>
-                            <i class="icofont-ui-call"></i> <span>+800-123-4567 6587</span>
+                            <i class="icofont-ui-call"></i> <span>Üngüt :0344 211 01 46 / 344 211 01 47  </span>
                         </li>
                         <li>
-                            <i class="icofont-location-pin"></i> Beverley, New York 224 USA
+                            <i class="icofont-location-pin"></i> Hürriyet:0344 215 53 50
                         </li>
                     </ul>
                     <ul class="lab-ul social-icons d-flex align-items-center">
-                        <li><p>Find us on : </p></li>
+                        <li><p>Sosyal Medya </p></li>
                         <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
                         <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
                         <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="index.html"><img src="{{asset('assets')}}/images/logo/01.png" alt="logo"></a>
+                        <a href="/"><img src="{{asset('assets')}}/logo.png" alt="logo"></a>
                     </div>
                     <div class="menu-area">
                         <div class="menu">
@@ -65,7 +65,7 @@
                                 <li>
                                     <a href="#0">Anasayfa</a>
                                     {{-- <ul class="lab-ul">
-                                        <li><a href="index.html" class="active">Home One</a></li>
+                                        <li><a href="/" class="active">Home One</a></li>
                                       
                                     </ul> --}}
                                 </li>
@@ -149,8 +149,8 @@
                                         <li><a href="404.html">404</a></li> --}}
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Galeri</a></li>
-                                <li><a href="contact.html">İletişim</a></li>
+                                <li><a href="/galeri">Galeri</a></li>
+                                <li><a href="/iletisim">İletişim</a></li>
                             </ul>
                         </div>
                         
@@ -185,15 +185,14 @@
                             <div class="footer-inner">
                                 <div class="footer-content">
                                     <div class="title">
-                                        <h4>Site Map</h4>
+                                        <h4>Site Haritası</h4>
                                     </div>
                                     <div class="content">
                                         <ul class="lab-ul">
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Feedback</a></li>
-                                            <li><a href="#">Plugins</a></li>
-                                            <li><a href="#">Support Forums</a></li>
-                                            <li><a href="#">Themes</a></li>
+                                            <li><a href="#">Geri Bildirim</a></li>
+                                            <li><a href="#">Eklentiler</a></li>
+                                            <li><a href="#">Destek Forumları</a></li>
+                                          
                                         </ul>
                                     </div>
                                 </div>
@@ -205,15 +204,15 @@
                             <div class="footer-inner">
                                 <div class="footer-content">
                                     <div class="title">
-                                        <h4>Useful Links</h4>
+                                        <h4>Kullanışlu Bağlantolar</h4>
                                     </div>
                                     <div class="content">
                                         <ul class="lab-ul">
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Help Link</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Hakkımızda</a></li>
+                                            <li><a href="#">Yardım </a></li>
+                                            <li><a href="#">Şartlar ve Koşullar</a></li>
+                                            <li><a href="#">Bize Ulaşın</a></li>
+                                            <li><a href="#">Gizlilik Politikası</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -225,15 +224,13 @@
                             <div class="footer-inner">
                                 <div class="footer-content">
                                     <div class="title">
-                                        <h4>Social Contact</h4>
+                                        <h4>Sosyal Medya Hesaplarımız</h4>
                                     </div>
                                     <div class="content">
                                         <ul class="lab-ul">
                                             <li><a href="#">Facebook</a></li>
-                                            <li><a href="#">Twitter</a></li>
                                             <li><a href="#">Instagram</a></li>
                                             <li><a href="#">YouTube</a></li>
-                                            <li><a href="#">Github</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -245,15 +242,14 @@
                             <div class="footer-inner">
                                 <div class="footer-content">
                                     <div class="title">
-                                        <h4>Our Support</h4>
+                                        <h4>Bize Ulaşma Kanalları</h4>
                                     </div>
                                     <div class="content">
                                         <ul class="lab-ul">
-                                            <li><a href="#">Help Center</a></li>
-                                            <li><a href="#">Paid with Mollie</a></li>
-                                            <li><a href="#">Status</a></li>
-                                            <li><a href="#">Changelog</a></li>
-                                            <li><a href="#">Contact Support</a></li>
+                                            <li><a href="#">Yardım Merkezi</a></li>
+                                            <li><a href="#">İletişim</a></li>
+                                            <li><a href="#">Haberler</a></li>
+                                            <li><a href="#">Kanalımız</a></li>
                                         </ul>
                                     </div>
                                 </div>

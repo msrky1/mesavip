@@ -52,7 +52,7 @@
                             <a class="nav-link pagescroll" href="#our-testimonial">Gözden Geçirin</a>
                         </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#stayconnect">İletişim</a>
+                        <a class="nav-link pagescroll" href="/iletisim">İletişim</a>
                     </li>
                 </ul>
             </div>

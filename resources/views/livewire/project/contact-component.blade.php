@@ -1,112 +1,147 @@
-<main> 
-    <!--Page Header-->
-    <section id="main-banner-page" class="position-relative page-header contact-header section-nav-smooth parallax">
-            <div class="container">
-                <div class="row" style="background-image: url({{asset('assets/image/0012.jpg')}});">
-                    <div class="col-lg-6 offset-lg-3">
-                        <div class="page-titles whitecolor text-center padding">
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="gradient-bg title-wrap mt-n5">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 whitecolor">
-                            <h3 class="float-left">İletişim</h3>
-                            <ul class="breadcrumb top10 bottom10 float-right">
-                                <li class="breadcrumb-item "><a href="/">Anasayfa</a></li>
-                                <li class="breadcrumb-item ">İletişim</li>
-                            </ul>
-                        </div>
+  <!-- Page Header section start here -->
+    <div class="pageheader-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="pageheader-content text-center">
+                        <h2>Bizimle İletişime Geçin</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Page Header ends -->
-        <!-- Contact US -->
-        <section id="stayconnect1" class="bglight position-relative padding_top padding_bottom_half noshadow">
-            <div class="container whitebox">
-                <div class="widget py-5">
-                    <div class="row">
-                        <div class="col-md-12 text-center wow fadeIn mt-n3" data-wow-delay="300ms">
-                            <h2 class="heading bottom30 darkcolor font-light2 pt-1"><span class="font-normal">İletişim</span> Adresleri
-                                <span class="divider-center"></span>
-                            </h2>
-                       
-                        </div>
-                      
-                        <div class="col-md-6 col-sm-6 order-sm-2">
-                            <div class="contact-meta px-2 text-center text-md-left">
-                                <div class="heading-title heading_small">
-                       
-                                  @foreach ($setting as $item)
-                                      
-                                
-                                    <h2 class="darkcolor font-normal mb-4">{{$item->name}}</h2>
-                                    <h3 class="darkcolor font-normal mb-4">{{$item->contact}}</h3>
-                                    <h3 class="darkcolor font-normal mb-4">Whatsapp: {{$item->whatsapp}}</h3>
-                                    <h3 class="darkcolor font-normal mb-4">Adres: {{$item->address}}</h3>
-                                    @endforeach
-                                </div>
-                                
-                                <ul class="social-icons mt-4 mb-4 mb-sm-0 wow fadeInUp no-border darkcolor" data-wow-delay="300ms">
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
-                                    <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
-                                    <li><a href="javascript:void(0)" class="linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
-                                    <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
-                                    <li><a href="javascript:void(0)" class="whatsapp"><i class="fab fa-whatsapp"></i> </a> </li>
-                                    <li><a href="javascript:void(0)"><i class="far fa-envelope"></i> </a> </li>
-                                </ul>
-                            </div><br>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12646.29086129616!2d36.89052468567331!3d37.588678076698244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1652520187241!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                       
-                    </div>
-                </div>
-                <div class="row">
-                    @foreach ($setting as $s)
+        </div>
+    </div>
+    <!-- Page Header section ending here -->
+
+    <!-- Map & address us Section Section Starts Here -->
+    <div class="map-address-section padding-tb section-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">BİZİMLE İLETİŞİME GEÇİN</span>
+                <h2 class="title">Mesa Vip Eğitim Kurumları</h2>
+            </div>
+            <div class="section-wrapper">
+                <div class="row flex-row-reverse">
+
+                    @foreach ($setting as $item)
                         
-                 
-                    <div class="col-lg-3 col-md-3">
-                        <div class="widget text-center top60 w-100 p-0">
-                            <div class="contact-box">
-                                <span class="icon-contact bluecolor"><i class="fas fa-mobile-alt"></i></span>
-                                <p class="bottom0"><a href="tel:+14046000396">{{$s->contact}}</a></p>
-                                <p class="bottom0"><a href="tel:+14046000396">{{$s->whatsapp}}</a></p>
-                         
-                             
+                    <div class="col-xl-4 col-lg-5 col-12">
+                        <div class="contact-wrapper">
+                            <div class="contact-item">
+                                <div class="contact-thumb">
+                                    <img src="assets/images/icon/01.png" alt="CodexCoder">
+                                </div>
+                                <div class="contact-content">
+                                    <h6 class="title">Adres</h6>
+                                    <p>{{$item->address}}</p>
+                                </div>
                             </div>
+                            <div class="contact-item">
+                                <div class="contact-thumb">
+                                    <img src="assets/images/icon/02.png" alt="CodexCoder">
+                                </div>
+                                <div class="contact-content">
+                                    <h6 class="title">Telefon</h6>
+                                    <p> {{$item->phone}}</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-thumb">
+                                    <img src="assets/images/icon/03.png" alt="CodexCoder">
+                                </div>
+                                <div class="contact-content">
+                                    <h6 class="title">E-mail  </h6>
+                                    <a href="mailto:info@gmail.com">{{$item->email}}</a>
+                                </div>
+                            </div>
+                            {{-- <div class="contact-item">
+                                <div class="contact-thumb">
+                                    <img src="assets/images/icon/04.png" alt="CodexCoder">
+                                </div>
+                                <div class="contact-content">
+                                    <h6 class="title">Web Sitesi</h6>
+                                    <a href="#">www.adminedukon@gmil.com</a>
+                                </div>
+                            </div> --}}
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="widget text-center top60 w-100 p-0">
-                            <div class="contact-box">
-                                <span class="icon-contact bluecolor"><i class="fas fa-map-marker-alt"></i></span>
-                                <p class="bottom0">{{$s->address}}</p>
-                                <p class="d-block">Kahramanmaraş</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="widget text-center top60 w-100 p-0">
-                            <div class="contact-box">
-                                <span class="icon-contact bluecolor"><i class="far fa-envelope"></i></span>
-                                <p class="bottom0"><a href="mailto:admin@website.com">{{$s->email}}</a></p>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    {{-- <div class="col-lg-3 col-md-3">
-                        <div class="widget text-center top60 w-100 p-0">
-                            <div class="contact-box">
-                                <span class="icon-contact bluecolor"><i class="far fa-clock"></i></span>
-                                <p class="bottom15">UTC−05:00 <span class="d-block">UTC+01:00</span></p>
-                            </div>
-                        </div>
-                    </div> --}}
-    
                     @endforeach
+
+                    <div class="col-xl-8 col-lg-7 col-12">
+                        <div class="map-area">
+                            <div class="maps">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2275990948147!2d90.38698831543141!3d23.739261895117753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c740f17d1%3A0xdd3daab8c90eb11f!2sCodexCoder!5e0!3m2!1sen!2sbd!4v1607313671993!5m2!1sen!2sbd" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+    <!-- Map & address us Section Section Ends Here -->
+
+    <!-- Contact us Section Section Starts Here -->
+    <div class="contact-section padding-tb">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">İletişim Formu </span>
+                <h2 class="title">Bize buradan mesaj atarak ulaşabilirsiniz</h2>
+            </div>
+            <div class="section-wrapper">
+                <form class="contact-form" action="contact.php" id="contact-form" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız Soyadınız" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Mail Adresiniz" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Telefon Numaranız" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Mesaj Başlığı" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group w-100">
+                        <textarea name="message" rows="8" id="message" placeholder="Mesaj Detayı" required></textarea>
+                    </div>
+                    <div class="form-group w-100 text-center">
+                        <button class="lab-btn"><span>Mesajı Gönderin</span></button>
+                    </div>
+                </form>
+                <p class="form-message"></p> 
+            </div>
+        </div>
+    </div>
+    <!-- Contact us Section Section Ends Here -->
+
+
+    <!-- footer -->
+    <div class="news-footer-wrap">
+        <div class="fs-shape">
+            <img src="assets/images/shape-img/03.png" alt="fst" class="fst-1">
+            <img src="assets/images/shape-img/04.png" alt="fst" class="fst-2">
+        </div>
+        <!-- Newsletter Section Start Here -->
+        <div class="news-letter">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="news-title">
+                        <h3>Want Us To Email You About Special Offers And Updates?</h3>
+                    </div>
+                    <div class="news-form">
+                        <form action="/">
+                            <div class="nf-list">
+                                <input type="email" name="email" placeholder="Enter Your Email">
+                                <input type="submit" name="submit" value="Subscribe Now">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Section Ending Here -->

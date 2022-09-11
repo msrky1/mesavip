@@ -11,6 +11,6 @@ class ContactComponent extends Component
     {
 
         $setting = Setting::all();
-        return view('livewire.project.contact-component' , ['setting' => $setting])->layout('layouts.base-w');
+        return view('livewire.project.contact-component' , ['setting' => $setting])->layout('layouts.base');
     }
 }
