@@ -119,7 +119,7 @@
                 <div class="app-branding">
                     <a class="app-logo" href="/admin/home"><img class="logo-icon mr-2"
                             src="{{ asset('admin') }}/assets/images/app-logo.svg" alt="logo"><span
-                            class="logo-text">Akıl Treni Koleji</span></a>
+                            class="logo-text">Mesa Vip Eğitim Kurumları</span></a>
 
                 </div>
                 <!--//app-branding-->

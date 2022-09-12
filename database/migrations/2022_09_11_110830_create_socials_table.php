@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('socials', function (Blueprint $table) {
+        Schema::create('socsials', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
+            $table->string('title');
+            $table->string('description');
+            $table->string('slug');
+            $table->string('image');
             $table->timestamps();
         });
     }

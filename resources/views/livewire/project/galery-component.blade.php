@@ -11,7 +11,7 @@
         <div class="gradient-bg title-wrap mt-n5">
             <div class="row">
                 <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">Akıl Treni Koleji</h3>
+                    <h3 class="float-left">Mesa Vip Eğitim Kurumları</h3>
                     <ul class="breadcrumb top10 bottom10 float-right">
                         <li class="breadcrumb-item hover-light"><a href="/">Anasayfa</a></li>
                         <li class="breadcrumb-item hover-light">Galeri</li>
@@ -25,11 +25,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center wow fadeIn top15" data-wow-delay="300ms">
-                <h2 class="heading bottom45 darkcolor font-light2">Akıl Treni Koleji  <span class="font-normal">Galeri</span>
+                <h2 class="heading bottom45 darkcolor font-light2">Mesa Vip Eğitim Kurumları  <span class="font-normal">Galeri</span>
                     <span class="divider-center"></span>
                 </h2>
                 <div class="col-md-6 offset-md-3 bottom40">
-                    <p>Akıl Treni Koleji Galeri Sayfasına Hoş Geldiniz.</p>
+                    <p>Mesa Vip Eğitim Kurumları Galeri Sayfasına Hoş Geldiniz.</p>
                 </div>
             </div>
            
@@ -45,7 +45,7 @@
                         <div class="gallery-hvr whitecolor">
                             <div class="center-box">
                                 <a href="{{ asset('storage') }}/galery/{{$g->image}}" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus"></i></a>
-                                <h4 class="w-100">Akıl Treni Koleji</h4>
+                                <h4 class="w-100">Mesa Vip Eğitim Kurumları</h4>
                             </div>
                         </div>
                     </div>

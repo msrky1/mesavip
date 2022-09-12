@@ -107,7 +107,7 @@
                     <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
                     <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
                 </ul>
-                <p class="whitecolor">&copy; Akıl Treni Koleji</p>
+                <p class="whitecolor">&copy; Mesa Vip Eğitim Kurumları</p>
             </div>
         </div>
     </div>

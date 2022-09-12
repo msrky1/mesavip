@@ -6,7 +6,7 @@
                    
                <div class="col-lg-8 offset-lg-2">
                    <div class="page-titles whitecolor text-center padding_top padding_bottom">
-                       <h2 class="font-xlight heading-title-small">Akıl Treni Koleji Kategoriler</h2>
+                       <h2 class="font-xlight heading-title-small">Mesa Kategoriler</h2>
                        <h2 class="font-bold">Kategoriler</h2>
                        {{-- <h2 class="font-xlight heading-title-small">Hakkımızda</h2> --}}
                        <h4 class="font-light pt-2">{{$category_name}}</h4>
