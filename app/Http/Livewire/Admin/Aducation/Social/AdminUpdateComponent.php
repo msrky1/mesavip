@@ -8,6 +8,6 @@ class AdminUpdateComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.aducation.social.admin-update-component');
+        return view('livewire.admin.aducation.social.admin-update-component')->layout('layouts.admin');
     }
 }

@@ -392,18 +392,18 @@
                                 <ul class="submenu-list list-unstyled">
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin.category.social*') ? 'active' : '' }}"
-                                            href="{{ route('admin.category') }}">Kategoriler</a></li>
+                                            href="{{ route('admin.category.social') }}">Sosyal Etkimlik Kategori</a></li>
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin.category.social.add*') ? 'active' : '' }}"
-                                            href="{{ route('admin.category.add') }}">Kategori Ekle</a></li>
+                                            href="{{ route('admin.category.social.add') }}">Kategori Ekle</a></li>
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin/blog*') ? 'active' : '' }}"
-                                            href="{{ route('admin.blog') }}">Haberler</a></li>
+                                            href="{{ route('admin.blog') }}">Etkinlikler</a></li>
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin/blog/add*') ? 'active' : '' }}"
-                                            href="{{ route('admin.blog.add') }}">Haber Ekle</a></li>
-                                    <li class="submenu-item"><a class="submenu-link"
-                                            href="{{ route('admin.setting') }}">Ayarlar</a></li>
+                                            href="{{ route('admin.blog.add') }}">Etkinlik Ekle</a></li>
+                                    {{-- <li class="submenu-item"><a class="submenu-link"
+                                            href="{{ route('admin.setting') }}">Ayarlar</a></li> --}}
                                 </ul>
                             </div>
                         </li>

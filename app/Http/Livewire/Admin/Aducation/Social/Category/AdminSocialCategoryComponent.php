@@ -8,6 +8,6 @@ class AdminSocialCategoryComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.aducation.social.category.admin-social-category-component');
+        return view('livewire.admin.aducation.social.category.admin-social-category-component')->layout('layouts.admin');
     }
 }
