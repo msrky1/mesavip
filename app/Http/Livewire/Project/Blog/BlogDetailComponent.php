@@ -33,6 +33,6 @@ class BlogDetailComponent extends Component
         $category = Category::paginate(5);
         
         $blog = Blog::where('slug' , $this->slug)->first();
-        return view('livewire.project.blog.blog-detail-component' , ['blog' => $blog , 'blogRecent' => $blogRecent, 'category' => $category])->layout('layouts.base-w');
+        return view('livewire.project.blog.blog-detail-component' , ['blog' => $blog , 'blogRecent' => $blogRecent, 'category' => $category])->layout('layouts.base');
     } 
 }

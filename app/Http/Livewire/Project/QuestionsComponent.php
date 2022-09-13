@@ -10,6 +10,6 @@ class QuestionsComponent extends Component
     {
 
         $question = Question::all();
-        return view('livewire.project.questions-component' , ['question' => $question])->layout('layouts.base-w');
+        return view('livewire.project.questions-component' , ['question' => $question])->layout('layouts.base');
     }
 }

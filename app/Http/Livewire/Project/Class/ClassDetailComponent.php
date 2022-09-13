@@ -44,6 +44,6 @@ class ClassDetailComponent extends Component
         $setting = Setting::all();
         $class = Classroom::where('classroom_id' , $this->classroom_id)->first();
         $classtime = Classroom::find($this->classroom_id)->getHour;
-        return view('livewire.project.class.class-detail-component', ['class' => $class , 'setting' => $setting, 'classtime' => $classtime])->layout('layouts.base-w');
+        return view('livewire.project.class.class-detail-component', ['class' => $class , 'setting' => $setting, 'classtime' => $classtime])->layout('layouts.base');
     }
 }

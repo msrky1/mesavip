@@ -19,6 +19,8 @@ use App\Http\Livewire\Project\Category\CategoryDetailComponent;
 
 
 
+
+
 use App\Http\Livewire\Admin\AdminHomeComponent;
 use App\Http\Livewire\Project\SearchComponent;
 
@@ -47,6 +49,26 @@ use App\Http\Livewire\Admin\Quaestion\QuestionEditComponent;
 
 use App\Http\Livewire\Admin\Team\TeamAddComponent;
 use App\Http\Livewire\Admin\Team\TeamEditComponent;
+use App\Http\Livewire\Admin\Aducation\Social\Category\AdminSocialCategoryComponent;
+use App\Http\Livewire\Admin\Aducation\Social\Category\AdminSocialCategoryAddComponent;
+use App\Http\Livewire\Admin\Aducation\Social\Category\AdminSocialCategoryUpdateComponent;
+
+
+use App\Http\Livewire\Admin\Aducation\Social\AdminSocialComponent;
+use App\Http\Livewire\Admin\Aducation\Social\AdminAddComponent;
+use App\Http\Livewire\Admin\Aducation\Social\AdminUpdateComponent;
+
+
+use App\Http\Livewire\Admin\Aducation\System\SystemAddComponent;
+use App\Http\Livewire\Admin\Aducation\System\SystemComponent;
+use App\Http\Livewire\Admin\Aducation\System\SystemUpdateComponent;
+
+
+use App\Http\Livewire\Admin\Aducation\Units\UnitsAddComponent;
+use App\Http\Livewire\Admin\Aducation\Units\UnitsComponent;
+use App\Http\Livewire\Admin\Aducation\Units\UnitsUpdateComponent;
+
+
 
 
 use App\Http\Livewire\Admin\Whatdo\WhatDoingAddComponent;
@@ -146,7 +168,7 @@ Route::post('/sinav/basvurusu/olustur/{name}' , [BasvuruController::class , 'pdf
 
 Route::get('/' , HomeComponent::class);
 Route::get('/galeri' , GaleryComponent::class);
-Route::get('/hakkimizda' , AboutComponent::class);
+Route::get('/hakkimizda' , AboutComponent::class);  
 Route::get('/sss' , QuestionsComponent::class);
  Route::get('/duyurular' , WhatdoComponent::class);
  Route::get('/ekibimiz' , TeamComponent::class);
@@ -217,7 +239,10 @@ Route::get('/admin/category/add' , CategoryAddComponent::class)->name('admin.cat
 Route::get('/admin/category/edit/{category_id}' , CategoryEditComponent::class)->name('admin.category.edit');
 
 
-
+// Kategori Sosyal 
+Route::get('/admin/category/social' , AdminSocialCategoryComponent::class)->name('admin.category.social');
+Route::get('/admin/category/social/add' , AdminSocialCategoryAddComponent::class)->name('admin.category.social.add');
+Route::get('/admin/category/social/edit/{category_id}' , AdminSocialCategoryUpdateComponent::class)->name('admin.category.social.edit');
 // Admin Galery
 
 Route::get('/admin/galery' , AdminGaleryComponent::class)->name('admin.galery');
@@ -234,7 +259,7 @@ Route::get('/admin/galery/add' , GaleryAddComponent::class)->name('admin.galery.
 
 Route::get('/admin/team' , AdminTeamComponent::class)->name('admin.team');
  Route::get('/admin/team/add' , TeamAddComponent::class)->name('admin.team.add');
- Route::get('/admin/team/edit/{lawyer_id}' , TeamEditComponent::class)->name('admin.team.edit');
+ Route::get('/admin/team/edit/{lawyer_id}' , TeamEditComponent::class)->name('admin.team.edit');    
 
 
 // Admin Neler Yapıyoruz

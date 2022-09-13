@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="/"><img src="{{asset('assets')}}/logo.png" alt="logo"></a>
+                        <a href="/"><img width="500px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
                     </div>
                     <div class="menu-area">
                         <div class="menu">

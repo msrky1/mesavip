@@ -8,6 +8,6 @@ class BusinessPartnerComponent extends Component
 {
     public function render()
     {
-        return view('livewire.project.business-partner-component')->layout('layouts.base-w');
+        return view('livewire.project.business-partner-component')->layout('layouts.base');
     }
 }

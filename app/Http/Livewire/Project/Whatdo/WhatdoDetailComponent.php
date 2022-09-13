@@ -21,6 +21,6 @@ class WhatdoDetailComponent extends Component
     {
 
         $whatdo = Whatdo::where('slug', $this->slug)->first();
-        return view('livewire.project.whatdo.whatdo-detail-component' , ['whatdos' => $whatdo])->layout('layouts.base-w');
+        return view('livewire.project.whatdo.whatdo-detail-component' , ['whatdos' => $whatdo])->layout('layouts.base');
     }
 }

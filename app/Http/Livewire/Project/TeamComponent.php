@@ -11,6 +11,6 @@ class TeamComponent extends Component
     { 
 
         $team = Lawyer::all();
-        return view('livewire.project.team-component', ['team' => $team])->layout('layouts.base-w');
+        return view('livewire.project.team-component', ['team' => $team])->layout('layouts.base');
     }
 }

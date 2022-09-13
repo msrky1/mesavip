@@ -13,6 +13,6 @@ class AboutComponent extends Component
 
         $about = About::all();
         $galery = Galery::all();
-        return view('livewire.project.about-component' , ['about' => $about , 'galery' => $galery])->layout('layouts.base-w');
+        return view('livewire.project.about-component' , ['about' => $about , 'galery' => $galery])->layout('layouts.base');
     }
 }

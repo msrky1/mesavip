@@ -14,6 +14,6 @@ class BlogComponent extends Component
 
         Carbon::setLocale('tr');
         $blog = Blog::orderBy('id' , 'DESC')->paginate('15');
-        return view('livewire.project.blog-component' , ['blog' => $blog])->layout('layouts.base-w');
+        return view('livewire.project.blog-component' , ['blog' => $blog])->layout('layouts.base');
     } 
 }

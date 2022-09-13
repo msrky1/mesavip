@@ -9,7 +9,7 @@ class WhatdoComponent extends Component
     public function render()
     {
         $whatdo = Whatdo::all();
-        return view('livewire.project.whatdo-component', ['whatdo' => $whatdo])->layout('layouts.base-w');
+        return view('livewire.project.whatdo-component', ['whatdo' => $whatdo])->layout('layouts.base');
     }
 }
     

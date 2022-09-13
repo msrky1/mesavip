@@ -10,6 +10,6 @@ class GaleryComponent extends Component
     { 
 
         $galery = Galery::all();
-        return view('livewire.project.galery-component' , ['galery' => $galery])->layout('layouts.base-w');
+        return view('livewire.project.galery-component' , ['galery' => $galery])->layout('layouts.base');
     } 
 }

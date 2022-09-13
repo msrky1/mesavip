@@ -60,6 +60,6 @@ class SearchComponent extends Component
  
     public function render()
     {
-        return view('livewire.search-component')->layout('layouts.base-w');
+        return view('livewire.search-component')->layout('layouts.base');
     }
 }
