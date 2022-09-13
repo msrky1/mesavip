@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin\Aducation\Social;
 use Livewire\Component;
 use App\Models\Social;
 use App\Models\SocialCategory;
+use File;
 
 class AdminSocialComponent extends Component
 {

@@ -8,7 +8,7 @@ use App\Models\Social;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
 use App\Models\SocialCategory;
-class AdminAddComponent extends Component
+ class AdminAddComponent extends Component
 {
     use WithFileUploads;
     public $category_id;

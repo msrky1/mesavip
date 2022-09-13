@@ -252,6 +252,21 @@ Route::get('/admin/social/add' , AdminAddComponent::class)->name('admin.social.a
 Route::get('/admin/social/edit/{blog_id}' , AdminUpdateComponent::class)->name('admin.social.edit');
 
 
+// Eğitim Sistemi
+Route::get('/admin/system' , SystemComponent::class)->name('admin.system');
+
+Route::get('/admin/system/add' , SystemAddComponent::class)->name('admin.system.add');
+Route::get('/admin/system/edit/{blog_id}' , SystemUpdateComponent::class)->name('admin.system.edit');
+
+
+// Eğitim Birimleri
+Route::get('/admin/units' , UnitsComponent::class)->name('admin.units');
+
+Route::get('/admin/units/add' , UnitsAddComponent::class)->name('admin.units.add');
+Route::get('/admin/units/edit/{blog_id}' , UnitsUpdateComponent::class)->name('admin.units.edit');
+
+
+
 // Admin Galery
 
 Route::get('/admin/galery' , AdminGaleryComponent::class)->name('admin.galery');
