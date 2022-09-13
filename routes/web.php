@@ -240,9 +240,18 @@ Route::get('/admin/category/edit/{category_id}' , CategoryEditComponent::class)-
 
 
 // Kategori Sosyal 
+
 Route::get('/admin/category/social' , AdminSocialCategoryComponent::class)->name('admin.category.social');
 Route::get('/admin/category/social/add' , AdminSocialCategoryAddComponent::class)->name('admin.category.social.add');
 Route::get('/admin/category/social/edit/{category_id}' , AdminSocialCategoryUpdateComponent::class)->name('admin.category.social.edit');
+
+// Sosyal Etkinlikler
+Route::get('/admin/social' , AdminBlogComponent::class)->name('admin.social');
+
+Route::get('/admin/social/add' , BlogAddComponent::class)->name('admin.social.add');
+Route::get('/admin/social/edit/{blog_id}' , BlogEditComponent::class)->name('admin.social.edit');
+
+
 // Admin Galery
 
 Route::get('/admin/galery' , AdminGaleryComponent::class)->name('admin.galery');

@@ -17,7 +17,7 @@
                             @if (Session::has('message'))
                                 <div class="alert alert-success">
                                     <strong>{{ Session::get('message') }}</strong> <a style="color: red"
-                                        href="{{ route('admin.category') }}"> Kategorileri Görüntüle!</a>
+                                        href="{{ route('admin.category.social') }}"> Kategorileri Görüntüle!</a>
                                 </div>
                             @endif
                             <div class="app-card-body">

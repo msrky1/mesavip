@@ -398,10 +398,10 @@
                                             href="{{ route('admin.category.social.add') }}">Kategori Ekle</a></li>
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin/blog*') ? 'active' : '' }}"
-                                            href="{{ route('admin.blog') }}">Etkinlikler</a></li>
+                                            href="{{ route('admin.social') }}">Etkinlikler</a></li>
                                     <li class="submenu-item"><a
                                             class="submenu-link {{ request()->is('admin/blog/add*') ? 'active' : '' }}"
-                                            href="{{ route('admin.blog.add') }}">Etkinlik Ekle</a></li>
+                                            href="{{ route('admin.social.add') }}">Etkinlik Ekle</a></li>
                                     {{-- <li class="submenu-item"><a class="submenu-link"
                                             href="{{ route('admin.setting') }}">Ayarlar</a></li> --}}
                                 </ul>

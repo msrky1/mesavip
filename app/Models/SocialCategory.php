@@ -7,6 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SocialCategory extends Model
 {
-    use HasFactory;
     protected $table = "social_categories";
 }
