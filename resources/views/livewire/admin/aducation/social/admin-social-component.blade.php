@@ -7,7 +7,7 @@
 
                 <div class="row g-3 mb-4 align-items-center justify-content-between">
                     <div class="col-auto">
-                        <h1 class="app-page-title mb-0">Blog Yönetimi</h1>
+                        <h1 class="app-page-title mb-0">Etkinlikler Yönetimi</h1>
                     </div>
 
                 </div>
@@ -15,9 +15,9 @@
 
 
                 <div class="col-auto">
-                    <a class="btn app-btn-primary" href="{{ route('admin.blog.add') }}">
+                    <a class="btn app-btn-primary" href="{{ route('admin.social.add') }}">
 
-                        Yeni Blog Ekle
+                        Yeni Etkinlik Ekle
                     </a>
                 </div>
                 @if (Session::has('message'))
@@ -40,19 +40,21 @@
                                                 <th class="cell">Resim</th>
                                                 <th class="cell">Başlık</th>
                                                 <th class="cell">İçerik</th>
+
                                                 <th class="cell">Kategori</th>
                                                 <th class="cell">Statüsü</th>
+
                                                 <th class="cell">Tarih</th>
                                                 <th class="cell">Aksiyonlar</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($blog as $b)
+                                            @foreach ($social as $b)
                                                 <tr>
                                                     <td class="cell">#{{ $b->id }}</td>
                                                     <td class="cell"><img width="150px"
-                                                            src="{{ asset('storage/blog') }}/{{ $b->image }}"
+                                                            src="{{ asset('storage/social') }}/{{ $b->image }}"
                                                             alt="{{ $b->title }}"></td>
 
                                                     <td class="cell"><span   class="truncate">{{ $b->title }}</span></td>
@@ -60,12 +62,13 @@
                                                    
                                                      
                                                     </td>
-                                                    <td class="cell">{{ $b->getCategory->name }}</td>
+                                                    <td class="cell">{{ $b->getCategory->name }}</td> 
                                                     <td class="cell">{{ $b->status }}</td>
+
                                                     <td class="cell">{{ $b->created_at }}</td>
 
                                                     <td class="cell"><a class="btn-sm app-btn-secondary"
-                                                            href="{{ route('admin.blog.edit', ['blog_id' => $b->id]) }}">Düzenle
+                                                            href="{{ route('admin.social.edit', ['blog_id' => $b->id]) }}">Düzenle
 
                                                         </a>
                                                         <a href="#" class="btn-sm app-btn-success"

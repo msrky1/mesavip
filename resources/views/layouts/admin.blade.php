@@ -144,7 +144,7 @@
                             <!--//nav-link-->
                         </li>
                         <!--//nav-item-->
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link {{ request()->is('admin/slider*') ? 'active' : '' }}"
                                 href="/admin/slider">
@@ -200,7 +200,7 @@
 
                             </a>
                             <!--//nav-link-->
-                        </li>
+                        </li> --}}
                         <!--//nav-item-->
                         
 						<li class="nav-item">
@@ -397,10 +397,10 @@
                                             class="submenu-link {{ request()->is('admin.category.social.add*') ? 'active' : '' }}"
                                             href="{{ route('admin.category.social.add') }}">Kategori Ekle</a></li>
                                     <li class="submenu-item"><a
-                                            class="submenu-link {{ request()->is('admin/blog*') ? 'active' : '' }}"
+                                            class="submenu-link {{ request()->is('admin/social*') ? 'active' : '' }}"
                                             href="{{ route('admin.social') }}">Etkinlikler</a></li>
                                     <li class="submenu-item"><a
-                                            class="submenu-link {{ request()->is('admin/blog/add*') ? 'active' : '' }}"
+                                            class="submenu-link {{ request()->is('admin/social/add*') ? 'active' : '' }}"
                                             href="{{ route('admin.social.add') }}">Etkinlik Ekle</a></li>
                                     {{-- <li class="submenu-item"><a class="submenu-link"
                                             href="{{ route('admin.setting') }}">Ayarlar</a></li> --}}

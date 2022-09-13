@@ -3,12 +3,12 @@
 
         <div class="app-content pt-3 p-md-3 p-lg-4">
             <div class="container-xl">
-                <h1 class="app-page-title">Blog</h1>
+                <h1 class="app-page-title">Etkinlikler</h1>
                 <hr class="mb-4">
                 <div class="row g-4 settings-section">
                     <div class="col-12 col-md-4">
-                        <h3 class="section-title">Blog Ekle</h3>
-                        <div class="section-intro">Blog eklemek için formu eksiksiz doldurun<a
+                        <h3 class="section-title">Etkinlik Ekle</h3>
+                        <div class="section-intro">Etkinlik eklemek için formu eksiksiz doldurun<a
                                 href="{{ route('admin.help') }}"><br>
                                 Daha
                                 Fazla Öğren</a></div>
@@ -18,7 +18,7 @@
                             @if (Session::has('message'))
                                 <div class="alert alert-success">
                                     <strong>{{ Session::get('message') }}</strong> <a style="color: red"
-                                        href="{{ route('admin.blog') }}"> Blog Görüntüle</a>
+                                        href="{{ route('admin.social') }}"> Etkinlikleri Görüntüle</a>
                                 </div>
                             @endif
                             <div class="app-card-body">

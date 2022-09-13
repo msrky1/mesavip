@@ -246,10 +246,10 @@ Route::get('/admin/category/social/add' , AdminSocialCategoryAddComponent::class
 Route::get('/admin/category/social/edit/{category_id}' , AdminSocialCategoryUpdateComponent::class)->name('admin.category.social.edit');
 
 // Sosyal Etkinlikler
-Route::get('/admin/social' , AdminBlogComponent::class)->name('admin.social');
+Route::get('/admin/social' , AdminSocialComponent::class)->name('admin.social');
 
-Route::get('/admin/social/add' , BlogAddComponent::class)->name('admin.social.add');
-Route::get('/admin/social/edit/{blog_id}' , BlogEditComponent::class)->name('admin.social.edit');
+Route::get('/admin/social/add' , AdminAddComponent::class)->name('admin.social.add');
+Route::get('/admin/social/edit/{blog_id}' , AdminUpdateComponent::class)->name('admin.social.edit');
 
 
 // Admin Galery
