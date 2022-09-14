@@ -19,12 +19,7 @@ class CategoryAddComponent extends Component
            $category->name = $this->name;
            
            $category->save();
-           $notification = new Notification();
-
-           $notification->name = $this->name;
-           $notification->notification = 'Yeni bir Kategori Eklendi!';
-           $notification->color = 'info';
-           $notification->save();
+      
 
            session()->flash('message' , 'Kategori Eklendi');
                   

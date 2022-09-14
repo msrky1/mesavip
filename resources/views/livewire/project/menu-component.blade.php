@@ -1,116 +1,148 @@
-<header class="site-header" id="header" lang="tr">
-    <nav class="navbar navbar-expand-lg transparent-bg static-nav ">
-        <div class="color-lines d-block">
-
-            <div class="row no-gutters top-color-bar height-30">
-                <div class="col-4 bg-red"></div>
-                <div class="col-4 bg-orange"></div>
-                <div class="col-4 bg-blue"></div>
-            </div>
-
-            <div class="svg-div-zig-outer">
-                <div class="svg-div-zig"></div>
-            </div>
-
-
-        </div>
-
-        <div class="container navbar-design">
-
-
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link active pagescroll" href="#header"> Anasayfa </a>
+<header class="header-section">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-area">
+                <ul class="lab-ul left">
+                    <li>
+                        <i class="icofont-ui-call"></i> <span>Üngüt :0344 211 01 46 / 344 211 01 47  </span>
                     </li>
-
-                    @foreach ($lock as $item)
-                        @if ($item->lock == 'Açık')
-                            <li class="nav-item">
-                                <a class="nav-link pagescroll" href="#our-process">Bursluluk Başvurusu</a>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link pagescroll" href="#our-process">Sınav Giriş Belgesi</a>
-                            </li>
-                        @endif
-                    @endforeach
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link pagescroll" href="#our-apps"> Hakkımızda </a>
-                    </li>
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link pagescroll" href="#our-questions"> Sık Sorulan Sorular </a>
-                    </li>
-                    {{-- <li class="nav-item dropdown static">
-                            <a class="nav-link pagescroll" href="#our-apps"> Şubelerimiz </a>
-                        </li> --}}
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link pagescroll" href="#our-team"> Galeri </a>
-                    </li>
-
-                    {{-- <li class="nav-item">
-                            <a class="nav-link pagescroll" href="#our-testimonial">Gözden Geçirin</a>
-                        </li> --}}
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="/iletisim">İletişim</a>
+                    <li>
+                        <i class="icofont-location-pin"></i> Hürriyet:0344 215 53 50
                     </li>
                 </ul>
-            </div>
-        </div>
-        <!--side menu open button-->
-        <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
-            <span></span> <span></span> <span></span>
-        </a>
-        <div class="sticky-nav-bottom-holder-svg">
-            <div class="svg-bottom"></div>
-        </div>
-    </nav>
-    <!-- side menu -->
-    <div class="side-menu opacity-0 bg-yellow">
-        <div class="overlay"></div>
-        <div class="inner-wrapper">
-            <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
-            <nav class="side-nav w-100">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#header">
-                            Anasayfa
-                        </a>
-                    </li>
-                    @foreach ($lock as $item)
-                        @if ($item->lock == 'Açık')
-                            <li class="nav-item">
-                                <a class="nav-link pagescroll" href="#our-process">Bursluluk Başvurusu</a>
-                            </li>
-                        @endif
-                    @endforeach
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#our-apps">Hakkımızda</a>
-                    </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link pagescroll" href="/haberler">Bizden Haberler</a>
-                    </li> --}}
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#our-team">Galeri</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#our-questions">SSS</a>
-                    </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link pagescroll" href="#stayconnect">İletişim</a>
-                    </li> --}}
+                <ul class="lab-ul social-icons d-flex align-items-center">
+                    <li><p>Sosyal Medya </p></li>
+                    <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
+                    <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
+                    <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
+                    <li><a href="#" class="rss"><i class="icofont-rss-feed"></i></a></li>
                 </ul>
-            </nav>
-            <div class="side-footer w-100">
-                <ul class="social-icons-simple white top40">
-                    <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
-                    <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
-                    <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
-                </ul>
-                <p class="whitecolor">&copy; Mesa Vip Eğitim Kurumları</p>
             </div>
         </div>
     </div>
-    <div id="close_side_menu" class="tooltip"></div>
-    <!-- End side menu -->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/"><img width="400px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
+                </div>
+                <div class="menu-area">
+                    <div class="menu">
+                        <ul class="lab-ul">
+                            <li>
+                                <a href="#0">Anasayfa</a>
+                                {{-- <ul class="lab-ul">
+                                    <li><a href="/" class="active">Home One</a></li>
+                                  
+                                </ul> --}}
+                            </li>
+                            
+                            <li>
+                                <a href="#0">Kurumsal</a>
+                                <ul class="lab-ul">
+                                    <li><a href="course.html">Kadromuz</a></li>
+                                    <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
+                                    <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
+                                    <li><a href="course-single.html">İnsan Kaynakları</a></li>
+                                    <li><a href="course-single.html">Belge ve Sertifikalarımız</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#0">Eğitim Birimleri</a>
+                                <ul class="lab-ul">
+                                    @foreach ($unit as $u)
+                                        
+                                    
+                                    <li><a href="{{$u->slug}}">{{$u->title}}</a></li>
+                                    
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#0">Eğitim Sistemleri</a>
+                                <ul class="lab-ul">
+                                    @foreach ($system as $item)
+                                        
+                                   
+                                    <li><a href="{{$item->slug}}">{{$item->title}}</a></li>
+                                    
+
+                                    @endforeach
+                                    {{-- <li>
+                                        <a href="#0">Shop Pages</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="shop.html">Shop Page</a></li>
+                                            <li><a href="shop-single.html">Shop Details Page</a></li>
+                                            <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="search-page.html">Search Page</a></li>
+                                    <li><a href="search-none.html">Search None</a></li>
+                                    <li><a href="404.html">404</a></li> --}}
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#0">Duyurular</a>
+                                <ul class="lab-ul">
+                                    <li><a href="about.html">Bizden Haberler</a></li>
+                                    <li><a href="team.html">Basında Biz</a></li>
+                                    <li><a href="instructor.html">Deneme Sınavları</a></li>
+                                    <li><a href="instructor.html">Sınav Takvimi</a></li>
+                                    {{-- <li>
+                                        <a href="#0">Shop Pages</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="shop.html">Shop Page</a></li>
+                                            <li><a href="shop-single.html">Shop Details Page</a></li>
+                                            <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="search-page.html">Search Page</a></li>
+                                    <li><a href="search-none.html">Search None</a></li>
+                                    <li><a href="404.html">404</a></li> --}}
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#0">Sosyal Etkinlikler</a>
+                                <ul class="lab-ul">
+                                    @foreach ($category as $item)
+                                        
+                                    <li><a href="about.html">{{$item->name}}</a></li>
+                                    @endforeach
+
+                                    {{-- <li>
+                                        <a href="#0">Shop Pages</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="shop.html">Shop Page</a></li>
+                                            <li><a href="shop-single.html">Shop Details Page</a></li>
+                                            <li><a href="cart-page.html">Shop Cart Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="search-page.html">Search Page</a></li>
+                                    <li><a href="search-none.html">Search None</a></li>
+                                    <li><a href="404.html">404</a></li> --}}
+                                </ul>
+                            </li>
+                            <li><a href="/galeri">Galeri</a></li>
+                            <li><a href="/iletisim">İletişim</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="login.html" class="login"><i class="icofont-user"></i> <span>Ara</span> </a>
+                    <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>Harita</span> </a>
+
+                    <!-- toggle icons -->
+                    <div class="header-bar d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="ellepsis-bar d-lg-none">
+                        <i class="icofont-info-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
