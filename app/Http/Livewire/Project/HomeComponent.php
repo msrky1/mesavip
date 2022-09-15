@@ -16,6 +16,7 @@ use App\Models\About;
 use App\Models\Social;
 use App\Models\Unit;
 use App\Models\Whatdo;
+use App\Models\SocialCategory;
 use Carbon\Carbon;
 use App\Models\Classroom;
 use App\Models\Lock;
@@ -41,6 +42,7 @@ class HomeComponent extends Component
         $about = About::all();
         $whatdo = Whatdo::all();
         $class = Classroom::all();
+        $category = SocialCategory::all();
         $lock = Lock::all();
 
         return view('livewire.project.home-component', 
@@ -54,6 +56,7 @@ class HomeComponent extends Component
           'about' => $about ,
 
           'whatdo' => $whatdo, 
+          'category' => $category, 
 
           'team' => $lawyer,
           'blog' => $blog,

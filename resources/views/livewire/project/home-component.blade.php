@@ -4,30 +4,30 @@
             <div class="row align-items-center">
                 <div class="col-xxl-5 col-xl-6 col-lg-10">
                     <div class="banner-content">
-                        <h6 class="subtitle text-uppercase fw-medium">Online education</h6>
-                        <h2 class="title"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
-                        <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p>
+                        <h6 class="subtitle text-uppercase fw-medium">MESA VİP EĞİTİM KURUMLARI</h6>
+                        <h2 class="title"><span class="d-lg-block">Eğitimde </span> Öncü <span class="d-lg-block"></span></h2>
+                        {{-- <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p> --}}
                         <form action="/">
                             <div class="banner-icon">
                                 <i class="icofont-search"></i>
                             </div>
-                            <input type="text" placeholder="Keywords of your course">
-                            <button type="submit">Search Course</button>
+                            <input type="text" placeholder="Web Sitesinde Arayın">
+                            <button type="submit">Ara</button>
                         </form>
                         <div class="banner-catagory d-flex flex-wrap">
-                            <p>Most Popular : </p>
+                            <p>Popüler Linkler:</p>
                             <ul class="lab-ul d-flex flex-wrap">
-                                <li><a href="#">Figma</a></li>
-                                <li><a href="#">Adobe XD</a></li>
-                                <li><a href="#">illustration</a></li>
-                                <li><a href="#">Photoshop</a></li>
+                                <li><a href="/hakkimizda">Hakkımızda</a></li>
+                                <li><a href="/galeri">Galeri</a></li>
+                                <li><a href="/İletisim">İletişim</a></li>
+                                <li><a href="/bizden-haberler">Haberler</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xxl-7 col-xl-6">
                     <div class="banner-thumb">
-                        {{-- <img src="{{asset('assets')}}/images/banner/01.png" alt="img"> --}}
+                         <img src="{{asset('assets')}}/images/banner/01.png" alt="img">  
                     </div>
                 </div>
             </div>
@@ -36,11 +36,11 @@
     <div class="all-shapes"></div>
     <div class="cbs-content-list d-none">
         <ul class="lab-ul">
-            <li class="ccl-shape shape-1"><a href="#">16M Students Happy</a></li>
-            <li class="ccl-shape shape-2"><a href="#">130K+ Total Courses</a></li>
-            <li class="ccl-shape shape-3"><a href="#">89% Successful Students</a></li>
-            <li class="ccl-shape shape-4"><a href="#">23M+ Learners</a></li>
-            <li class="ccl-shape shape-5"><a href="#">36+ Languages</a></li>
+            <li class="ccl-shape shape-1"><a href="#">10.000'den Fazla Mutlu Öğrenci</a></li>
+            <li class="ccl-shape shape-2"><a href="#">130 Derslik</a></li>
+            <li class="ccl-shape shape-3"><a href="/kadro">40+ Kadro</a></li>
+            <li class="ccl-shape shape-4"><a href="#">15+ Dil Kursu</a></li>
+            <li class="ccl-shape shape-5"><a href="/sosyal-etkinlikler">36+ Sosyal Etkinlikler</a></li>
         </ul>
     </div>
 </section>
@@ -48,7 +48,7 @@
 
 
 <!-- sponsor section start here -->
-<div class="sponsor-section section-bg">
+{{-- <div class="sponsor-section section-bg">
     <div class="container">
         <div class="section-wrapper">
             <div class="sponsor-slider">
@@ -99,97 +99,43 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- sponsor section ending here -->
 
 
 <!-- category section start here -->
+
+@foreach ($lock as $item)
+
+@if ($item->lock == 'Açık')
+    
+
 <div class="category-section padding-tb">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">Popular Category</span>
-            <h2 class="title">Popular Category For Learn</h2>
+            <span class="subtitle">Bursluluk Başvuruları</span>
+            <h2 class="title">Lütfen Başvurmak İstediğinizi Bir Sınıfı Seçin</h2>
         </div>
         <div class="section-wrapper">
             <div class="row g-2 justify-content-center row-cols-xl-6 row-cols-md-3 row-cols-sm-2 row-cols-1">
+                 @foreach ($class as $cla)
+                     
                 <div class="col">
                     <div class="category-item text-center">
                         <div class="category-inner">
-                            <div class="category-thumb">
-                                <img src="{{asset('assets')}}/images/category/icon/01.jpg" alt="category">
-                            </div>
-                            <div class="category-content">
-                                <a href="course.html"><h6>Computer Science</h6></a>
-                                <span>24 Course</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-item text-center">
-                        <div class="category-inner">
-                            <div class="category-thumb">
+                            {{-- <div class="category-thumb">
                                 <img src="{{asset('assets')}}/images/category/icon/02.jpg" alt="category">
-                            </div>
+                            </div> --}}
                             <div class="category-content">
-                                <a href="course.html"><h6>Civil Engineering</h6></a>
-                                <span>40 Course</span>
+                                <a href="{{ route('class.detail', ['classroom_id' => $cla->classroom_id]) }}"><h6>Civil Engineering</h6></a>
+                                <span>{{$cla->classroom}}</span>
+                                <button> Başvur</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="category-item text-center">
-                        <div class="category-inner">
-                            <div class="category-thumb">
-                                <img src="{{asset('assets')}}/images/category/icon/03.jpg" alt="category">
-                            </div>
-                            <div class="category-content">
-                                <a href="course.html"><h6>Business Analysis</h6></a>
-                                <span>27 Course</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-item text-center">
-                        <div class="category-inner">
-                            <div class="category-thumb">
-                                <img src="{{asset('assets')}}/images/category/icon/04.jpg" alt="category">
-                            </div>
-                            <div class="category-content">
-                                <a href="course.html"><h6>Data Science Analytics</h6></a>
-                                <span>28 Course</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-item text-center">
-                        <div class="category-inner">
-                            <div class="category-thumb">
-                                <img src="{{asset('assets')}}/images/category/icon/05.jpg" alt="category">
-                            </div>
-                            <div class="category-content">
-                                <a href="course.html"><h6>Learning Management</h6></a>
-                                <span>78 Course</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-item text-center">
-                        <div class="category-inner">
-                            <div class="category-thumb">
-                                <img src="{{asset('assets')}}/images/category/icon/06.jpg" alt="category">
-                            </div>
-                            <div class="category-content">
-                                <a href="course.html"><h6>Computer Engineering</h6></a>
-                                <span>38 Course</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <div class="text-center mt-5">
                 <a href="course.html" class="lab-btn"><span>Browse All Categories</span></a>
@@ -204,8 +150,8 @@
 <div class="course-section padding-tb section-bg">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">Featured Courses</span>
-            <h2 class="title">Pick A Course To Get Started</h2>
+            <span class="subtitle">BİZDEN HABERLER</span>
+            <h2 class="title">Mesa Vip Eğitim Kurumlarımızın Son Güncel Haberleri</h2>
         </div>
         <div class="section-wrapper">
             <div class="row g-4 justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-1">
@@ -252,225 +198,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="course-item">
-                        <div class="course-inner">
-                            <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/02.jpg" alt="course">
-                            </div>
-                            <div class="course-content">
-                                <div class="course-price">$30</div>
-                                <div class="course-category">
-                                    <div class="course-cate">
-                                        <a href="#">Photoshop</a>
-                                    </div>
-                                    <div class="course-reiew">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                        <span class="ratting-count">
-                                            03 reviews
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href="course-single.html"><h5>Certified Graphic Design with Free Project Course</h5></a>
-                                <div class="course-details">
-                                    <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
-                                    <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-author">
-                                        <img src="{{asset('assets')}}/images/course/author/02.jpg" alt="course author">
-                                        <a href="team-single.html" class="ca-name">Lora Smith</a>
-                                    </div>
-                                    <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="course-item">
-                        <div class="course-inner">
-                            <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/03.jpg" alt="course">
-                            </div>
-                            <div class="course-content">
-                                <div class="course-price">$30</div>
-                                <div class="course-category">
-                                    <div class="course-cate">
-                                        <a href="#">Photoshop</a>
-                                    </div>
-                                    <div class="course-reiew">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                        <span class="ratting-count">
-                                            03 reviews
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href="course-single.html"><h5>Theory Learn New Student And Fundamentals</h5></a>
-                                <div class="course-details">
-                                    <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
-                                    <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-author">
-                                        <img src="{{asset('assets')}}/images/course/author/03.jpg" alt="course author">
-                                        <a href="team-single.html" class="ca-name">Robot Smith</a>
-                                    </div>
-                                    <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="course-item">
-                        <div class="course-inner">
-                            <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/04.jpg" alt="course">
-                            </div>
-                            <div class="course-content">
-                                <div class="course-price">$30</div>
-                                <div class="course-category">
-                                    <div class="course-cate">
-                                        <a href="#">Adobe XD</a>
-                                    </div>
-                                    <div class="course-reiew">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                        <span class="ratting-count">
-                                            03 reviews
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href="course-single.html"><h5>Computer Fundamentals Basic Startup Ultricies Vitae</h5></a>
-                                <div class="course-details">
-                                    <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
-                                    <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-author">
-                                        <img src="{{asset('assets')}}/images/course/author/04.jpg" alt="course author">
-                                        <a href="team-single.html" class="ca-name">Zinat Zaara</a>
-                                    </div>
-                                    <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="course-item">
-                        <div class="course-inner">
-                            <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/05.jpg" alt="course">
-                            </div>
-                            <div class="course-content">
-                                <div class="course-price">$30</div>
-                                <div class="course-category">
-                                    <div class="course-cate">
-                                        <a href="#">Adobe XD</a>
-                                    </div>
-                                    <div class="course-reiew">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                        <span class="ratting-count">
-                                            03 reviews
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href="course-single.html"><h5>Boozy Halloween Drinks for the Grown Eleifend Kuismod</h5></a>
-                                <div class="course-details">
-                                    <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
-                                    <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-author">
-                                        <img src="{{asset('assets')}}/images/course/author/05.jpg" alt="course author">
-                                        <a href="team-single.html" class="ca-name">Billy Rivera</a>
-                                    </div>
-                                    <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="course-item">
-                        <div class="course-inner">
-                            <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/06.jpg" alt="course">
-                            </div>
-                            <div class="course-content">
-                                <div class="course-price">$30</div>
-                                <div class="course-category">
-                                    <div class="course-cate">
-                                        <a href="#">Adobe XD</a>
-                                    </div>
-                                    <div class="course-reiew">
-                                        <span class="ratting">
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                            <i class="icofont-ui-rating"></i>
-                                        </span>
-                                        <span class="ratting-count">
-                                            03 reviews
-                                        </span>
-                                    </div>
-                                </div>
-                                <a href="course-single.html"><h5>Student Want to Learn About Science And Arts</h5></a>
-                                <div class="course-details">
-                                    <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
-                                    <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
-                                <div class="course-footer">
-                                    <div class="course-author">
-                                        <img src="{{asset('assets')}}/images/course/author/06.jpg" alt="course author">
-                                        <a href="team-single.html" class="ca-name">Subrina Kabir</a>
-                                    </div>
-                                    <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
+                
             </div>
         </div>
     </div>
 </div>
+
+@endif
+    
+@endforeach
 <!-- course section ending here -->
 
 
@@ -481,9 +218,9 @@
             <div class="col">
                 <div class="about-right padding-tb">
                     <div class="section-header">
-                        <span class="subtitle">About Our Edukon</span>
-                        <h2 class="title">Good Qualification Services And Better Skills</h2>
-                        <p>Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than extensible archtectur communicate leveraged services and cross-platform.</p>
+                        <span class="subtitle">MESA VİP EĞİTİM KURUMLARI HAKKINDA</span>
+                        <h2 class="title">HAKKIMIZDA</h2>
+                        <p>HAKKIMIZDA</p>
                     </div>
                     <div class="section-wrapper">
                         <ul class="lab-ul">
@@ -492,7 +229,7 @@
                                     <img src="{{asset('assets')}}/images/about/icon/01.jpg" alt="about icon">
                                 </div>
                                 <div class="sr-right">
-                                    <h5>Skilled Instructors</h5>
+                                    <h5>Kadromuz</h5>
                                     <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
                                 </div>
                             </li>
@@ -501,7 +238,7 @@
                                     <img src="{{asset('assets')}}/images/about/icon/02.jpg" alt="about icon">
                                 </div>
                                 <div class="sr-right">
-                                    <h5>Get Certificate</h5>
+                                    <h5>Sertifikalar</h5>
                                     <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
                                 </div>
                             </li>
@@ -510,7 +247,7 @@
                                     <img src="{{asset('assets')}}/images/about/icon/03.jpg" alt="about icon">
                                 </div>
                                 <div class="sr-right">
-                                    <h5>Online Classes</h5>
+                                    <h5>Sosyal Etkinlikler</h5>
                                     <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
                                 </div>
                             </li>
@@ -535,89 +272,12 @@
 <div class="instructor-section padding-tb section-bg">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">World-class Instructors</span>
-            <h2 class="title">Classes Taught By Real Creators</h2>
+            <span class="subtitle">KADROMUZ</span>
+            <h2 class="title">Alanında Uzman Eğitmenlerimiz</h2>
         </div>
         <div class="section-wrapper">
             <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                <div class="col">
-                    <div class="instructor-item">
-                        <div class="instructor-inner">
-                            <div class="instructor-thumb">
-                                <img src="{{asset('assets')}}/images/instructor/01.jpg" alt="instructor">
-                            </div>
-                            <div class="instructor-content">
-                                <a href="team-single.html"><h4>Emilee Logan</h4></a>
-                                <p>Master of Education Degree</p>
-                                <span class="ratting">
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="instructor-footer">
-                            <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="instructor-item">
-                        <div class="instructor-inner">
-                            <div class="instructor-thumb">
-                                <img src="{{asset('assets')}}/images/instructor/02.jpg" alt="instructor">
-                            </div>
-                            <div class="instructor-content">
-                                <a href="team-single.html"><h4>Donald Logan</h4></a>
-                                <p>Master of Education Degree</p>
-                                <span class="ratting">
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="instructor-footer">
-                            <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="instructor-item">
-                        <div class="instructor-inner">
-                            <div class="instructor-thumb">
-                                <img src="{{asset('assets')}}/images/instructor/03.jpg" alt="instructor">
-                            </div>
-                            <div class="instructor-content">
-                                <a href="team-single.html"><h4>Oliver Porter</h4></a>
-                                <p>Master of Education Degree</p>
-                                <span class="ratting">
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="instructor-footer">
-                            <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="col">
                     <div class="instructor-item">
                         <div class="instructor-inner">
@@ -658,8 +318,8 @@
 <div class="student-feedbak-section padding-tb shape-img">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">Loved by 200,000+ students</span>
-            <h2 class="title">Students Community Feedback</h2>
+            <span class="subtitle">ÖĞRENCİLERİMİZDEN GELEN YORUMLAR</span>
+            <h2 class="title">Bizi Tercih Eden Öğrencilerimizden Yorumlar  </h2>
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -738,8 +398,8 @@
 <div class="blog-section padding-tb section-bg">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">FORM OUR BLOG POSTS</span>
-            <h2 class="title">More Articles From Resource Library</h2>
+            <span class="subtitle">Eğitim Birimlerimiz</span>
+            <h2 class="title">Mesa Vip Eğitim Kurumları Eğitim Birimleri</h2>
         </div>
         <div class="section-wrapper">
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
@@ -771,62 +431,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="post-item">
-                        <div class="post-inner">
-                            <div class="post-thumb">
-                                <a href="blog-single.html"><img src="{{asset('assets')}}/images/blog/02.jpg" alt="blog thumb"></a>
-                            </div>
-                            <div class="post-content">
-                                <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
-                                <div class="meta-post">
-                                    <ul class="lab-ul">
-                                        <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                        <li><i class="icofont-calendar"></i>April 23,2021</li>
-                                    </ul>
-                                </div>
-                                <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
-                            </div>
-                            <div class="post-footer">
-                                <div class="pf-left">
-                                    <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
-                                </div>
-                                <div class="pf-right">
-                                    <i class="icofont-comment"></i>
-                                    <span class="comment-count">3</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="post-item">
-                        <div class="post-inner">
-                            <div class="post-thumb">
-                                <a href="blog-single.html"><img src="{{asset('assets')}}/images/blog/03.jpg" alt="blog thumb"></a>
-                            </div>
-                            <div class="post-content">
-                                <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
-                                <div class="meta-post">
-                                    <ul class="lab-ul">
-                                        <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                        <li><i class="icofont-calendar"></i>April 23,2021</li>
-                                    </ul>
-                                </div>
-                                <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
-                            </div>
-                            <div class="post-footer">
-                                <div class="pf-left">
-                                    <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
-                                </div>
-                                <div class="pf-right">
-                                    <i class="icofont-comment"></i>
-                                    <span class="comment-count">3</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -838,8 +443,8 @@
 <div class="achievement-section padding-tb">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">START TO SUCCESS</span>
-            <h2 class="title">Achieve Your Goals With Edukon</h2>
+            <span class="subtitle">MESA VİP EĞİTİM KURUMLARI İLE  </span>
+            <h2 class="title">BAŞARIYA ULAŞIN!</h2>
         </div>
         <div class="section-wrapper">
             <div class="counter-part mb-4">
@@ -849,7 +454,9 @@
                             <div class="count-inner">
                                 <div class="count-content">
                                     <h2><span class="count" data-to="30" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Years of Language Education Experience</p>
+                                    <p>Yılların Dil Eğitimi Deneyimi
+
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -859,7 +466,7 @@
                             <div class="count-inner">
                                 <div class="count-content">
                                     <h2><span class="count" data-to="3080" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Learners Enrolled in Edukon Courses</p>
+                                    <p>Kayıtlı Öğrencilerimiz</p>
                                 </div>
                             </div>
                         </div>
@@ -869,7 +476,7 @@
                             <div class="count-inner">
                                 <div class="count-content">
                                     <h2><span class="count" data-to="330" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Qualified Teachers And Language Experts</p>
+                                    <p>Nitelikli Öğretmenlerimiz</p>
                                 </div>
                             </div>
                         </div>
@@ -879,7 +486,7 @@
                             <div class="count-inner">
                                 <div class="count-content">
                                     <h2><span class="count" data-to="2300" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Innovative Foreign Language Courses</p>
+                                    <p>Yenilikçi Yabancı Dil Kursları</p>
                                 </div>
                             </div>
                         </div>
@@ -888,30 +495,17 @@
             </div>
             <div class="achieve-part">
                 <div class="row g-4 row-cols-1 row-cols-lg-2">
+                    
                     <div class="col">
                         <div class="achieve-item">
                             <div class="achieve-inner">
-                                <div class="achieve-thumb">
-                                    <img src="{{asset('assets')}}/images/achive/01.png" alt="achieve thumb">
-                                </div>
-                                <div class="achieve-content">
-                                    <h4>Start Teaching Today</h4>
-                                    <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                    <a href="#" class="lab-btn"><span>Become A Instructor</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="achieve-item">
-                            <div class="achieve-inner">
-                                <div class="achieve-thumb">
+                                {{-- <div class="achieve-thumb">
                                     <img src="{{asset('assets')}}/images/achive/02.png" alt="achieve thumb">
-                                </div>
+                                </div> --}}
                                 <div class="achieve-content">
-                                    <h4>If You Join Our Course</h4>
+                                    <h4>Bize Ulaşın</h4>
                                     <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                    <a href="#" class="lab-btn"><span>Register For Free</span></a>
+                                    <a href="#" class="lab-btn"><span>Şimdi İletişime Geçin</span></a>
                                 </div>
                             </div>
                         </div>

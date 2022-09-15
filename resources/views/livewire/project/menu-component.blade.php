@@ -25,13 +25,13 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="/"><img width="400px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
+                    <a href="/"><img width="200px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
                 </div>
                 <div class="menu-area">
                     <div class="menu">
                         <ul class="lab-ul">
                             <li>
-                                <a href="#0">Anasayfa</a>
+                                <a href="/">Anasayfa</a>
                                 {{-- <ul class="lab-ul">
                                     <li><a href="/" class="active">Home One</a></li>
                                   
