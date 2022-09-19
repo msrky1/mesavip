@@ -127,9 +127,11 @@
                                 <img src="{{asset('assets')}}/images/category/icon/02.jpg" alt="category">
                             </div> --}}
                             <div class="category-content">
-                                <a href="{{ route('class.detail', ['classroom_id' => $cla->classroom_id]) }}"><h6>Civil Engineering</h6></a>
-                                <span>{{$cla->classroom}}</span>
-                                <button> Başvur</button>
+                                
+                                <a href="{{ route('class.detail', ['classroom_id' => $cla->classroom_id]) }}"><h4><span>{{$cla->classroom}}</span></h4></a>
+                                {{-- <span>{{$cla->classroom}}</span> --}}
+                                <p> Başvurmak İstediğiniz Sınıfı Seçin </p>
+                                <li class="ccl-shape shape-2"> Başvur</li>
                             </div>
                         </div>
                     </div>
