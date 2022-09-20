@@ -120,28 +120,3 @@
     <!-- Contact us Section Section Ends Here -->
 
 
-    <!-- footer -->
-    <div class="news-footer-wrap">
-        <div class="fs-shape">
-            <img src="assets/images/shape-img/03.png" alt="fst" class="fst-1">
-            <img src="assets/images/shape-img/04.png" alt="fst" class="fst-2">
-        </div>
-        <!-- Newsletter Section Start Here -->
-        <div class="news-letter">
-            <div class="container">
-                <div class="section-wrapper">
-                    <div class="news-title">
-                        <h3>Want Us To Email You About Special Offers And Updates?</h3>
-                    </div>
-                    <div class="news-form">
-                        <form action="/">
-                            <div class="nf-list">
-                                <input type="email" name="email" placeholder="Enter Your Email">
-                                <input type="submit" name="submit" value="Subscribe Now">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter Section Ending Here -->

@@ -23,94 +23,30 @@
 <div class="shop-page padding-tb">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-12">
-                <article>
-                    <div class="shop-title d-flex flex-wrap justify-content-between">
-                        <p>MEsa Vip Eğitim Kurumları</p>
-                        <div class="product-view-mode">
-                            <a class="active" data-target="grid"><i class="icofont-ghost"></i></a>
-                            <a data-target="list"><i class="icofont-listine-dots"></i></a>
-                        </div>
-                    </div>
-                    <div class="shop-product-wrap grid row justify-content-center">
-                        @foreach ($galery as $item)
-                            
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="product-item">
-                                <div class="product-thumb">
-                                    <div class="pro-thumb">
-                                        <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
-                                    </div>
-                                    <div class="product-action-link">
-                                        <a class="view-modal" data-target="#{{$item->image}}"><i class="icofont-eye"></i></a>
-                                        <a href="#"><i class="icofont-heart"></i></a>
-                                        <a href="#"><i class="icofont-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h5><a href="#">Mesa Vip Eğitim Kurumları</a></h5>
-                                    
-                                            
-                                    <p>Görseli Büyütmek İçin Üzerine Dokunun</p>
-                                </div>
-                            </div>
-                            <div class="product-list-item">
-                                <div class="product-thumb">
-                                    <div class="pro-thumb">
-                                        <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
-                                    </div>
-                                    <div class="product-action-link">
-                                        <a class="view-modal" data-target="#quick_view"><i class="icofont-eye"></i></a>
-                                      
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h5><a href="#">Mesa Vip Eğitim Kurumları</a></h5>
-                                  
-                                    <h6>
-                                       
-                                    </h6>
-                                    <p>Görseli Büyütmek İçin Dokunun</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        @endforeach
-
-
-
-
-                    </div>
-                   
-                </article>
-            </div>
-
-        </div>
-
-        @foreach ($galery as $item)
+            <div id="animated-thumbnails">
+                <div id="lightgallery">
+                @foreach ($galery as $item)
             
-        <div class="modal" id="{{$item->image}}">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal"><i class="icofont-close"></i></button>
-                    <div class="modal-body">
-                        <div class="product-details-inner">
-                            <div class="row align-items-center">
-                                <div>
-                                    <div class="thumb text-center">
-                                        <div class="pro-thumb">
-                                            <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+           
+                <a href="{{asset('storage')}}/galery/{{$item->image}}" data-lg-size="1600-2400">
+                    <img alt="img1" src="{{asset('storage')}}/galery/{{$item->image}}" />
+                </a>
+           
+                @endforeach
+                   </div>
             </div>
         </div>
-        @endforeach
+
+
+        <script type="text/javascript">
+            lightGallery(document.getElementById('lightgallery'), {
+                plugins: [lgZoom, lgThumbnail],
+                licenseKey: 'your_license_key',
+                speed: 500,
+                // ... other settings
+            });
+        </script>
 
 
 

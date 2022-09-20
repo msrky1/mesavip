@@ -110,7 +110,7 @@
     <div class="footer-bottom style-2">
         <div class="container">
             <div class="section-wrapper">
-                <p>&copy; 2022 <a href="/">Mahmut Sarıkaya</a> </p>
+                <p>&copy; 2022 <a href="/">Mesa Vip Eğitim Kurumları</a> </p>
             </div>
         </div>
     </div>
