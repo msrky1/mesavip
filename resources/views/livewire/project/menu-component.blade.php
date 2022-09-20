@@ -4,10 +4,10 @@
             <div class="header-top-area">
                 <ul class="lab-ul left">
                     <li>
-                        <i class="icofont-ui-call"></i> <span>Üngüt :0344 211 01 46 / 344 211 01 47  </span>
+                        <i class="icofont-ui-call"></i> <span> 0344 211 01 46 / 344 211 01 47  </span>
                     </li>
                     <li>
-                        <i class="icofont-location-pin"></i> Hürriyet:0344 215 53 50
+                        <i class="icofont-location-pin"></i> Onikişubat/Kahramanmaraş
                     </li>
                 </ul>
                 <ul class="lab-ul social-icons d-flex align-items-center">
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="/"><img width="200px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
+                    <a href="/"><img width="370px" src="{{asset('assets')}}/logo.png" alt="logo"></a>
                 </div>
                 <div class="menu-area">
                     <div class="menu">
@@ -129,8 +129,8 @@
                         </ul>
                     </div>
                     
-                    <a href="login.html" class="login"><i class="icofont-user"></i> <span>Ara</span> </a>
-                    <a href="signup.html" class="signup"><i class="icofont-users"></i> <span>Harita</span> </a>
+                    <a href="/" class="login"><i class="icofont-phone"></i> <span>Ara</span> </a>
+                    <a href="/" class="signup"><i class="icofont-map"></i> <span>Harita</span> </a>
 
                     <!-- toggle icons -->
                     <div class="header-bar d-lg-none">

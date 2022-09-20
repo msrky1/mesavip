@@ -139,9 +139,9 @@
                 @endforeach
 
             </div>
-            <div class="text-center mt-5">
+            {{-- <div class="text-center mt-5">
                 <a href="course.html" class="lab-btn"><span>Browse All Categories</span></a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -157,20 +157,23 @@
         </div>
         <div class="section-wrapper">
             <div class="row g-4 justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-1">
+
+                @foreach ($blog as $b)
+                    
                 <div class="col">
                     <div class="course-item">
                         <div class="course-inner">
                             <div class="course-thumb">
-                                <img src="{{asset('assets')}}/images/course/01.jpg" alt="course">
+                                <img src="{{asset('storage')}}/blog/{{$b->image}}" alt="course">
                             </div>
                             <div class="course-content">
-                                <div class="course-price">$30</div>
+                                <div class="course-price">Mesa Vip</div>
                                 <div class="course-category">
                                     <div class="course-cate">
-                                        <a href="#">Adobe XD</a>
+                                        <a href="#">Admin</a>
                                     </div>
                                     <div class="course-reiew">
-                                        <span class="ratting">
+                                        {{-- <span class="ratting">
                                             <i class="icofont-ui-rating"></i>
                                             <i class="icofont-ui-rating"></i>
                                             <i class="icofont-ui-rating"></i>
@@ -179,21 +182,21 @@
                                         </span>
                                         <span class="ratting-count">
                                             03 reviews
-                                        </span>
+                                        </span> --}}
                                     </div>
                                 </div>
-                                <a href="course-single.html"><h5>Fundamentals of Adobe XD Theory Learn New</h5></a>
-                                <div class="course-details">
+                                <a href="course-single.html"><h5>{{$b->title}}</h5></a>
+                                {{-- <div class="course-details">
                                     <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
                                     <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
-                                </div>
+                                </div> --}}
                                 <div class="course-footer">
-                                    <div class="course-author">
+                                    {{-- <div class="course-author">
                                         <img src="{{asset('assets')}}/images/course/author/01.jpg" alt="course author">
                                         <a href="team-single.html" class="ca-name">William Smith</a>
-                                    </div>
+                                    </div> --}}
                                     <div class="course-btn">
-                                        <a href="course-single.html" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
+                                        <a href="/" class="lab-btn-text">Detay <i class="icofont-external-link"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +204,8 @@
                     </div>
                 </div>
                
-                
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -231,28 +235,21 @@
                                     <img src="{{asset('assets')}}/images/about/icon/01.jpg" alt="about icon">
                                 </div>
                                 <div class="sr-right">
-                                    <h5>Kadromuz</h5>
-                                    <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                </div>
+                                    <h5>MİSYONUMUZ</h5>
+<p>Mesavip Eğitim Kurumları; bilgiyi sentezleyerek kullanabilen, sanatsal üretime açık, teknolojik gelişmeleri yakından takip eden, özgür düşünen ve düşündüklerini açıkça ifade edebilen, toplumsal sorumluluk bilinciyle araştırma ve sorun çözme kabiliyeti gelişmiş, toplumsal kurallara saygılı, disiplinli çalışmayı kendine ilke edinmiş, geniş ufuklu idealist bireyler yetiştirerek, çok boyutlu kalite standartları içinde topluma hizmet sunmayı görev edinmiştir.</p>                                </div>
                             </li>
                             <li>
                                 <div class="sr-left">
                                     <img src="{{asset('assets')}}/images/about/icon/02.jpg" alt="about icon">
                                 </div>
                                 <div class="sr-right">
-                                    <h5>Sertifikalar</h5>
-                                    <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
+                                    <h5>VİZYONUMUZ
+
+                                    </h5>
+                                    <p>Yetiştirdiği bireylerle toplumsal gelişime önderlik eden, öğrenci ve eğitimci kadrosunun birlikte öğrenme tutkusu etrafında buluştukları, bütün akademik ve idari bileşenlerinin bu arayışa kendilerini adadıkları, bölgesinde ve sektöründe öncü bir eğitim kurumu olmaktır.</p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="sr-left">
-                                    <img src="{{asset('assets')}}/images/about/icon/03.jpg" alt="about icon">
-                                </div>
-                                <div class="sr-right">
-                                    <h5>Sosyal Etkinlikler</h5>
-                                    <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
-                                </div>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -279,37 +276,34 @@
         </div>
         <div class="section-wrapper">
             <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                
+                @foreach ($team as $t)
+                    
                 <div class="col">
                     <div class="instructor-item">
                         <div class="instructor-inner">
                             <div class="instructor-thumb">
-                                <img src="{{asset('assets')}}/images/instructor/04.jpg" alt="instructor">
+                                <img src="{{asset('storage')}}/team/{{$t->image}}" alt="instructor">
                             </div>
                             <div class="instructor-content">
-                                <a href="team-single.html"><h4>Nahla Jones</h4></a>
-                                <p>Master of Education Degree</p>
-                                <span class="ratting">
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                    <i class="icofont-ui-rating"></i>
-                                </span>
+                                <a href="team-single.html"><h4>{{$t->name}}</h4></a>
+                                <p>{{$t->about}}</p>
+                               
                             </div>
                         </div>
-                        <div class="instructor-footer">
+                        {{-- <div class="instructor-footer">
                             <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
                                 <li><i class="icofont-book-alt"></i> 08 courses</li>
                                 <li><i class="icofont-users-alt-3"></i> 30 students</li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
+                @endforeach
+
             </div>
-            <div class="text-center footer-btn">
+            {{-- <div class="text-center footer-btn">
                 <p>Want to help people learn, grow and achieve more in life?<a href="team.html">Become an instructor</a></p>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -320,8 +314,8 @@
 <div class="student-feedbak-section padding-tb shape-img">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">ÖĞRENCİLERİMİZDEN GELEN YORUMLAR</span>
-            <h2 class="title">Bizi Tercih Eden Öğrencilerimizden Yorumlar  </h2>
+            <span class="subtitle">Sık Sourulan Sorular</span>
+            <h2 class="title">Mesa Vip Eğitim Kurumları Sık Sorulan Sorular   </h2>
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -333,6 +327,8 @@
                         </div>
                     </div>
                 </div>
+                @foreach ($questions as $q)
+                    
                 <div class="col">
                     <div class="stu-feed-item">
                         <div class="stu-feed-inner">
@@ -342,52 +338,19 @@
                                         <img src="{{asset('assets')}}/images/feedback/student/01.jpg" alt="student feedback">
                                     </div>
                                     <div class="sftl-content">
-                                        <a href="#"><h6>Oliver Beddows</h6></a>
-                                        <span>UX designer</span>
+                                        <a href="#"><h6>{{$q->title}}</h6></a>
+                                        <span>Mesa Vip</span>
                                     </div>
                                 </div>
-                                <div class="sft-right">
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
+                                
                             </div>
                             <div class="stu-feed-bottom">
-                                <p>Rapidiously buildcollaboration anden deas sharing viaing and with bleedng edgeing nterfaces fnergstcally plagiarize teams anbuling paradgms whereas goingi forward process and monetze</p>
+                                <p> {{$q->description}} </p>
                             </div>
                         </div>
                     </div>
-                    <div class="stu-feed-item">
-                        <div class="stu-feed-inner">
-                            <div class="stu-feed-top">
-                                <div class="sft-left">
-                                    <div class="sftl-thumb">
-                                        <img src="{{asset('assets')}}/images/feedback/student/02.jpg" alt="student feedback">
-                                    </div>
-                                    <div class="sftl-content">
-                                        <a href="#"><h6>Madley Pondor</h6></a>
-                                        <span>UX designer</span>
-                                    </div>
-                                </div>
-                                <div class="sft-right">
-                                    <span class="ratting">
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                        <i class="icofont-ui-rating"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="stu-feed-bottom">
-                                <p>Rapidiously buildcollaboration anden deas sharing viaing and with bleedng edgeing nterfaces fnergstcally plagiarize teams anbuling paradgms whereas goingi forward process and monetze</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach 
+
                 </div>
             </div>
         </div>
@@ -400,39 +363,44 @@
 <div class="blog-section padding-tb section-bg">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">Eğitim Birimlerimiz</span>
+            <span class="subtitle">EĞİTİM BİRİMLERİMİZ</span>
             <h2 class="title">Mesa Vip Eğitim Kurumları Eğitim Birimleri</h2>
         </div>
         <div class="section-wrapper">
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
+
+                @foreach ($unit as $u)
+                    
                 <div class="col">
                     <div class="post-item">
                         <div class="post-inner">
                             <div class="post-thumb">
-                                <a href="blog-single.html"><img src="{{asset('assets')}}/images/blog/01.jpg" alt="blog thumb"></a>
+                                <a href="/"><img src="{{asset('storage')}}/units/{{$u->image}}" alt="{{$u->title}}"></a>
                             </div>
                             <div class="post-content">
-                                <a href="blog-single.html"><h4>Scottish Creatives To Receive Funded Business.</h4></a>
+                                <a href="blog-single.html"><h4>{{$u->title}}.</h4></a>
                                 <div class="meta-post">
                                     <ul class="lab-ul">
-                                        <li><i class="icofont-ui-user"></i>Begrass Tyson</li>
-                                        <li><i class="icofont-calendar"></i>April 23,2021</li>
+                                        <li><i class="icofont-ui-user"></i>Admin</li>
+                                        {{-- <li><i class="icofont-calendar"></i>April 23,2021</li> --}}
                                     </ul>
                                 </div>
-                                <p>Pluoresnts customize prancing apcente customer service anding ands asing in straelg Interacvely cordinate performe</p>
+                                <p> {{$u->description}} </p>
                             </div>
                             <div class="post-footer">
                                 <div class="pf-left">
-                                    <a href="blog-single.html" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
+                                    <a href="blog-single.html" class="lab-btn-text">Detay <i class="icofont-external-link"></i></a>
                                 </div>
-                                <div class="pf-right">
+                                {{-- <div class="pf-right">
                                     <i class="icofont-comment"></i>
                                     <span class="comment-count">3</span>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
+
                 
             </div>
         </div>
@@ -520,29 +488,3 @@
 <!-- Achievement section ending here -->
 
 
-<!-- footer -->
-<div class="news-footer-wrap">
-    <div class="fs-shape">
-        <img src="{{asset('assets')}}/images/shape-img/03.png" alt="fst" class="fst-1">
-        <img src="{{asset('assets')}}/images/shape-img/04.png" alt="fst" class="fst-2">
-    </div>
-    <!-- Newsletter Section Start Here -->
-    <div class="news-letter">
-        <div class="container">
-            <div class="section-wrapper">
-                <div class="news-title">
-                    <h3>Size Özel Teklifler ve Güncellemeler Hakkında E-posta Göndermemizi İster misiniz?
-                    </h3>
-                </div>
-                <div class="news-form">
-                    <form action="/">
-                        <div class="nf-list">
-                            <input type="email" name="email" placeholder="Email Adresinizi Girin">
-                            <input type="submit" name="submit" value="Gönder">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Newsletter Section Ending Here -->

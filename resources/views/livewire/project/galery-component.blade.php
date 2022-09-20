@@ -1,58 +1,122 @@
-<section id="main-banner-page" class="position-relative page-header contact-header section-nav-smooth parallax">
+<!-- Page Header section start here -->
+<div class="pageheader-section">
     <div class="container">
-        <div class="row" style="background-image: url({{asset('assets/image/0012.jpg')}});">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="page-titles whitecolor text-center padding">
-                    {{-- <h2 class="font-bold"> Galeri</h2>
-                    <h3 class="font-light py-2">Galeri</h3> --}}
-                </div>
-            </div>
-        </div>
-        <div class="gradient-bg title-wrap mt-n5">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 whitecolor">
-                    <h3 class="float-left">Mesa Vip Eğitim Kurumları</h3>
-                    <ul class="breadcrumb top10 bottom10 float-right">
-                        <li class="breadcrumb-item hover-light"><a href="/">Anasayfa</a></li>
-                        <li class="breadcrumb-item hover-light">Galeri</li>
-                    </ul>
+        <div class="row">
+            <div class="col-12">
+                <div class="pageheader-content text-center">
+                    <h2>Mesa Vip Galeri</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Galeri</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section id="gallery" class="bglight position-relative padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center wow fadeIn top15" data-wow-delay="300ms">
-                <h2 class="heading bottom45 darkcolor font-light2">Mesa Vip Eğitim Kurumları  <span class="font-normal">Galeri</span>
-                    <span class="divider-center"></span>
-                </h2>
-                <div class="col-md-6 offset-md-3 bottom40">
-                    <p>Mesa Vip Eğitim Kurumları Galeri Sayfasına Hoş Geldiniz.</p>
-                </div>
-            </div>
-           
-            <div class="col-lg-12">
-                <div id="grid-mosaic" class="cbp cbp-l-grid-mosaic-flat">
-                    <!--Item 1-->
+</div>
+<!-- Page Header section ending here -->
 
-                    @foreach ($galery as $g)
-                        
-    
-                    <div class="cbp-item brand graphics">
-                        <img src="{{ asset('storage') }}/galery/{{$g->image}}" alt="">
-                        <div class="gallery-hvr whitecolor">
-                            <div class="center-box">
-                                <a href="{{ asset('storage') }}/galery/{{$g->image}}" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus"></i></a>
-                                <h4 class="w-100">Mesa Vip Eğitim Kurumları</h4>
+
+<!-- blog section start here -->
+<div class="shop-page padding-tb">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-12">
+                <article>
+                    <div class="shop-title d-flex flex-wrap justify-content-between">
+                        <p>MEsa Vip Eğitim Kurumları</p>
+                        <div class="product-view-mode">
+                            <a class="active" data-target="grid"><i class="icofont-ghost"></i></a>
+                            <a data-target="list"><i class="icofont-listine-dots"></i></a>
+                        </div>
+                    </div>
+                    <div class="shop-product-wrap grid row justify-content-center">
+                        @foreach ($galery as $item)
+                            
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <div class="pro-thumb">
+                                        <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
+                                    </div>
+                                    <div class="product-action-link">
+                                        <a class="view-modal" data-target="#{{$item->image}}"><i class="icofont-eye"></i></a>
+                                        <a href="#"><i class="icofont-heart"></i></a>
+                                        <a href="#"><i class="icofont-cart-alt"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h5><a href="#">Mesa Vip Eğitim Kurumları</a></h5>
+                                    
+                                            
+                                    <p>Görseli Büyütmek İçin Üzerine Dokunun</p>
+                                </div>
+                            </div>
+                            <div class="product-list-item">
+                                <div class="product-thumb">
+                                    <div class="pro-thumb">
+                                        <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
+                                    </div>
+                                    <div class="product-action-link">
+                                        <a class="view-modal" data-target="#quick_view"><i class="icofont-eye"></i></a>
+                                      
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h5><a href="#">Mesa Vip Eğitim Kurumları</a></h5>
+                                  
+                                    <h6>
+                                       
+                                    </h6>
+                                    <p>Görseli Büyütmek İçin Dokunun</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        @endforeach
+
+
+
+
+                    </div>
+                   
+                </article>
+            </div>
+
+        </div>
+
+        @foreach ($galery as $item)
+            
+        <div class="modal" id="{{$item->image}}">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal"><i class="icofont-close"></i></button>
+                    <div class="modal-body">
+                        <div class="product-details-inner">
+                            <div class="row align-items-center">
+                                <div>
+                                    <div class="thumb text-center">
+                                        <div class="pro-thumb">
+                                            <img src="{{asset('storage')}}/galery/{{$item->image}}" alt="{{$item->image}}">
+                                        </div>
+                                    </div>
+                                </div>
+                              
                             </div>
                         </div>
                     </div>
-                    <!--Item 2-->
-                    @endforeach
                 </div>
             </div>
         </div>
+        @endforeach
+
+
+
     </div>
-</section>
+</div>
+<!-- blog section ending here -->
+
+
+<!-- blog section ending here -->

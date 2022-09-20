@@ -44,6 +44,7 @@ class HomeComponent extends Component
         $class = Classroom::all();
         $category = SocialCategory::all();
         $lock = Lock::all();
+        $unit = Unit::all();
 
         return view('livewire.project.home-component', 
         
@@ -63,6 +64,7 @@ class HomeComponent extends Component
            'galery' => $Galery,
            'class' => $class,
            'lock' => $lock,
+           'unit' => $unit,
 
            'questions' => $question
 

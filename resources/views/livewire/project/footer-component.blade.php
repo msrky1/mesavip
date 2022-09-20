@@ -1,3 +1,29 @@
+<div class="news-footer-wrap">
+    <div class="fs-shape">
+        <img src="{{asset('assets')}}/images/shape-img/03.png" alt="fst" class="fst-1">
+        <img src="{{asset('assets')}}/images/shape-img/04.png" alt="fst" class="fst-2">
+    </div>
+    <!-- Newsletter Section Start Here -->
+    <div class="news-letter">
+        <div class="container">
+            <div class="section-wrapper">
+                <div class="news-title">
+                    <h3>Size Özel Teklifler ve Güncellemeler Hakkında E-posta Göndermemizi İster misiniz?
+                    </h3>
+                </div>
+                <div class="news-form">
+                    <form action="/">
+                        <div class="nf-list">
+                            <input type="email" name="email" placeholder="Email Adresinizi Girin">
+                            <input type="submit" name="submit" value="Gönder">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <footer>
     <div class="footer-top padding-tb pt-0">
         <div class="container">
@@ -14,7 +40,7 @@
                                         <li><a href="#">Geri Bildirim</a></li>
                                         <li><a href="#">Eklentiler</a></li>
                                         <li><a href="#">Destek Forumları</a></li>
-                                      
+
                                     </ul>
                                 </div>
                             </div>
@@ -84,7 +110,7 @@
     <div class="footer-bottom style-2">
         <div class="container">
             <div class="section-wrapper">
-                <p>&copy; 2022 <a href="/">Mahmut Sarıkaya</a>  </p>
+                <p>&copy; 2022 <a href="/">Mahmut Sarıkaya</a> </p>
             </div>
         </div>
     </div>
