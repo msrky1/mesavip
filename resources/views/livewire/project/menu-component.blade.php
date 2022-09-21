@@ -85,7 +85,7 @@
                             <li>
                                 <a href="#0">Duyurular</a>
                                 <ul class="lab-ul">
-                                    <li><a href="about.html">Bizden Haberler</a></li>
+                                    <li><a href="/haberler">Bizden Haberler</a></li>
                                     <li><a href="team.html">Basında Biz</a></li>
                                     <li><a href="instructor.html">Deneme Sınavları</a></li>
                                     <li><a href="instructor.html">Sınav Takvimi</a></li>
@@ -107,7 +107,7 @@
                                 <ul class="lab-ul">
                                     @foreach ($category as $item)
                                         
-                                    <li><a href="about.html">{{$item->name}}</a></li>
+                                    <li><a href="/">{{$item->name}}</a></li>
                                     @endforeach
 
                                     {{-- <li>

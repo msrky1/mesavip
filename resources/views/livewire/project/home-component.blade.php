@@ -345,7 +345,7 @@
                                 
                             </div>
                             <div class="stu-feed-bottom">
-                                <p> {!! $q->description = Str::limit($q->description, 250) !!} </p>
+                                <p> {!! $q->description = Str::limit($q->description, 200) !!} </p>
                             </div>
                         </div>
                     </div>
@@ -385,7 +385,7 @@
                                         {{-- <li><i class="icofont-calendar"></i>April 23,2021</li> --}}
                                     </ul>
                                 </div>
-                                <p> {!! $u->description = Str::limit($u->description, 250) !!} </p>
+                                <p> {!! $u->description = Str::limit($u->description, 200) !!} </p>
                             </div>
                             <div class="post-footer">
                                 <div class="pf-left">
