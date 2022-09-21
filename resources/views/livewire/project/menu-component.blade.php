@@ -41,11 +41,10 @@
                             <li>
                                 <a href="#0">Kurumsal</a>
                                 <ul class="lab-ul">
-                                    <li><a href="course.html">Kadromuz</a></li>
-                                    <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
-                                    <li><a href="course-single.html">Misyon ve Vizyonumuz</a></li>
-                                    <li><a href="course-single.html">İnsan Kaynakları</a></li>
-                                    <li><a href="course-single.html">Belge ve Sertifikalarımız</a></li>
+                                    <li><a href="/ekibimiz">Kadromuz</a></li>
+                                    <li><a href="/hakkimizda">Misyon ve Vizyonumuz</a></li>
+                                    <li><a href="/">İnsan Kaynakları</a></li>
+                                    <li><a href="/">Belge ve Sertifikalarımız</a></li>
 
                                 </ul>
                             </li>

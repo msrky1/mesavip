@@ -474,8 +474,8 @@
                                 </div> --}}
                                 <div class="achieve-content">
                                     <h4>Bize Ulaşın</h4>
-                                    <p>Seamlessly engage technically sound coaborative reintermed goal oriented content rather than ethica</p>
-                                    <a href="#" class="lab-btn"><span>Şimdi İletişime Geçin</span></a>
+                                    <p>Bizlere Whatsapp ve iletişim numaralarımızdan dilediğiniz zaman ulaşabilirsiniz.</p>
+                                    <a href="/iletisim" class="lab-btn"><span>Şimdi İletişime Geçin</span></a>
                                 </div>
                             </div>
                         </div>

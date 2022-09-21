@@ -54,7 +54,7 @@
                                     <div class="mb-3">
 
                                         <label for="setting-input-2" class="form-label">Pazisyonu </label>:
-                                        <input type="text" placeholder="Avukat" name="pozition" class="form-control" wire:model="pozition"
+                                        <input type="text" placeholder="İngilizce Öğretmeni" name="pozition" class="form-control" wire:model="pozition"
                                             required>
 
 

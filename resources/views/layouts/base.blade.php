@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/swiper.min.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/lightcase.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
-    <link href="path/to/lightbox.css" rel="stylesheet" />
+    
+    {{-- <link href="path/to/lightbox.css" rel="stylesheet" /> --}}
 </head>
 
 <body>

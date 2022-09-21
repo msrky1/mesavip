@@ -22,20 +22,19 @@
 <!-- blog section start here -->
 <div class="shop-page padding-tb">
     <div class="container">
-        <div class="row justify-content-center">
-            <div id="animated-thumbnails">
-                <div id="lightgallery">
-                @foreach ($galery as $item)
-            
+        <div class="row">
+           
+                    @foreach ($galery as $item)
+                        <div class="col-sm-6 col-md-4 col-lg-3 item">
 
-           
-                <a href="{{asset('storage')}}/galery/{{$item->image}}" data-lg-size="1600-2400">
-                    <img alt="img1" src="{{asset('storage')}}/galery/{{$item->image}}" />
-                </a>
-           
-                @endforeach
-                   </div>
-            </div>
+
+                            <a href="{{ asset('storage') }}/galery/{{ $item->image }}" data-lg-lightbox="photos">
+                                <img alt="img1" src="{{ asset('storage') }}/galery/{{ $item->image }}" />
+                            </a>
+                        </div>
+                    @endforeach
+                
+            
         </div>
 
 
