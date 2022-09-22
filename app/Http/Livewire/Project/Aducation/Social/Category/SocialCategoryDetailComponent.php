@@ -5,6 +5,9 @@ namespace App\Http\Livewire\Project\Aducation\Social\Category;
 use Livewire\Component;
 use App\Models\SocialCategory;
 use App\Models\Social;
+use Livewire\WithPagination;
+use Carbon\Carbon;
+
 
 class SocialCategoryDetailComponent extends Component
 {

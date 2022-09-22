@@ -16,6 +16,8 @@ use App\Http\Livewire\Project\ContactComponent;
 use App\Http\Livewire\Project\TeamComponent;
 use App\Http\Livewire\Project\QuestionsComponent;
 use App\Http\Livewire\Project\Category\CategoryDetailComponent;
+use App\Http\Livewire\Project\Aducation\System\SystemDetailComponent;
+use App\Http\Livewire\Project\Aducation\Units\UnitDetailComponent;
 
 
 use App\Http\Livewire\Project\Aducation\Social\Category\SocialCategoryDetailComponent;
@@ -182,9 +184,11 @@ Route::get('/sss' , QuestionsComponent::class);
  Route::get('/sinif/detay/{classroom_id}' , ClassDetailComponent::class)->name('class.detail');
 
 
+  Route::get('/egitim-sistemleri/{slug}', SystemDetailComponent::class)->name('system.detail');
+  Route::get('/egitim-birimleri/{slug}', UnitDetailComponent::class)->name('unit.detail');
   Route::get('/duyuru/{slug}', WhatdoDetailComponent::class)->name('whatdo.detail');
   Route::get('/haber/{slug}', BlogDetailComponent::class)->name('blog.detail');
-  Route::get('/kategori/{category_slug}', CategoryDetailComponent::class)->name('blog.category');
+ // Route::get('/kategori/{category_slug}', CategoryDetailComponent::class)->name('blog.category');
   
   Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
 

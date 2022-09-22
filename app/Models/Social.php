@@ -11,6 +11,7 @@ class Social extends Model
     use HasFactory;
 
     protected $table = "socsials";
+    
     public function getCategory(){
 
         return $this->belongsTo(SocialCategory::class, 'category_id');

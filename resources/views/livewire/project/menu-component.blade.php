@@ -54,8 +54,10 @@
                                     @foreach ($unit as $u)
                                         
                                     
-                                    <li><a href="{{$u->slug}}">{{$u->title}}</a></li>
-                                    
+                                    <li>
+                                        <a href="{{ route('unit.detail', $u->slug) }}">{{ $u->title }}
+                                        </a>
+                                    </li>                                    
                                     @endforeach
                                 </ul>
                             </li>
@@ -65,7 +67,10 @@
                                     @foreach ($system as $item)
                                         
                                    
-                                    <li><a href="{{$item->slug}}">{{$item->title}}</a></li>
+                                    <li>
+                                        <a href="{{ route('system.detail', $item->slug) }}">{{ $item->title }}
+                                        </a>
+                                    </li>
                                     
 
                                     @endforeach
@@ -105,10 +110,11 @@
                             <li>
                                 <a href="#0">Sosyal Etkinlikler</a>
                                 <ul class="lab-ul">
-                                    @foreach ($category as $item)
+                                    {{-- @foreach ($category as $cat)
                                         
-                                    <li><a href="/">{{$item->name}}</a></li>
-                                    @endforeach
+                                    <li> <a href="{{route('social.category' , ['category_slug'  => $cat->slug ])}}">{{$cat->name}}</a>
+                                    </li>
+                                    @endforeach --}}
 
                                     {{-- <li>
                                         <a href="#0">Shop Pages</a>
