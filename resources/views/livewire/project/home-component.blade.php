@@ -131,7 +131,7 @@
                                 <a href="{{ route('class.detail', ['classroom_id' => $cla->classroom_id]) }}"><h4><span>{{$cla->classroom}}</span></h4></a>
                                 {{-- <span>{{$cla->classroom}}</span> --}}
                                 <p> Başvurmak İstediğiniz Sınıfı Seçin </p>
-                                <li class="ccl-shape shape-2"> Başvur</li>
+                               <a href=" {{ route('class.detail', ['classroom_id' => $cla->classroom_id]) }}" > <button class="button-one"> Başvur</button> </a> 
                             </div>
                         </div>
                     </div>
@@ -378,7 +378,7 @@
                                 <a href="/"><img src="{{asset('storage')}}/units/{{$u->image}}" alt="{{$u->title}}"></a>
                             </div>
                             <div class="post-content">
-                                <a href="blog-single.html"><h4>{{$u->title}}.</h4></a>
+                                <a href="/"><h4>{{$u->title}}</h4></a>
                                 <div class="meta-post">
                                     <ul class="lab-ul">
                                         <li><i class="icofont-ui-user"></i>Admin</li>
@@ -389,7 +389,7 @@
                             </div>
                             <div class="post-footer">
                                 <div class="pf-left">
-                                    <a href="blog-single.html" class="lab-btn-text">Detay <i class="icofont-external-link"></i></a>
+                                    <a href="{{ route('unit.detail', $u->slug) }}" class="lab-btn-text">Detay <i class="icofont-external-link"></i></a>
                                 </div>
                                 {{-- <div class="pf-right">
                                     <i class="icofont-comment"></i>

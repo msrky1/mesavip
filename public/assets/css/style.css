@@ -6674,3 +6674,26 @@ footer.style-2 .footer-top.dark-view * {
 	margin-top:16px;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.button-one {
+
+     background-color: #00a556;
+     border-radius: 20px;
+     color: white;
+
+     width: 80px;
+     height: 50px;
+
+
+}
+
+.button-one:hover {
+
+  background-color: #00a556;
+  border-radius: 25px;
+  color: white;
+
+  width: 83px;
+  height: 55px;
+}
