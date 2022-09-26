@@ -322,9 +322,12 @@
                 <div class="col">
                     <div class="sf-left">
                         <div class="sfl-thumb">
-                            <img src="{{asset('assets')}}/images/feedback/01.jpg" alt="student feedback">
-                            <a href="https://www.youtube-nocookie.com/embed/jP649ZHA8Tg" class="video-button" data-rel="lightcase"><i class="icofont-ui-play"></i></a>
+                            <img src="{{asset('assets')}}/images/school/04.jpg" alt="student feedback">
+                            <a href="https://www.youtube.com/embed/aOe6IKKRuEI" class="video-button" data-rel="lightcase"><i class="icofont-ui-play"></i></a>
+                            {{-- <iframe width="1268" height="713" src="https://www.youtube.com/embed/aOe6IKKRuEI" title="MESA VİP EĞİTİM KURUMLARI" frameborder="0"
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
                         </div>
+                        
                     </div>
                 </div>
                 @foreach ($questions as $q)
