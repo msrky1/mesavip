@@ -34,9 +34,9 @@
                                     </div>
                                     <div class="mb-3">
 
-                                        <label for="setting-input-2" class="form-label">Hakkında </label>:
-                                        <input type="text" name="about" class="form-control" wire:model="about"
-                                            required>
+                                        <label for="setting-input-2" class="form-label">Hakkında </label>: <br>
+                                        
+                                        <textarea name="about" wire:model="about" placeholder="Hakkında" widht="150"> </textarea>
 
 
                                     </div>

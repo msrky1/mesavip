@@ -219,7 +219,7 @@
                             <!--//nav-link-->
                         </li>
                         <!--//nav-item-->
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <!--//clsBootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link {{ request()->is('admin/about*') ? 'active' : '' }}"
                                 href="{{ route('admin.about') }}">
@@ -231,7 +231,7 @@
                                 <span class="nav-link-text">Hakkımızda</span>
                             </a>
                             <!--//nav-link-->
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <!--//clsBootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link {{ request()->is('admin/notification*') ? 'active' : '' }}"

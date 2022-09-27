@@ -67,12 +67,13 @@
                             <h5 class="title">Kategoriler</h5>
                         </div>
                         <ul class="widget-wrapper">
-                            {{-- @foreach ($category as $cat)
+                     @foreach ($category as $cat)
                             <li>
-                                <a href="{{route('blog.category' , ['category_slug'  => $cat->slug ])}}" class="d-flex flex-wrap justify-content-between">
+                               
+                                <a href="{{route('blog.category')}}" class="d-flex flex-wrap justify-content-between">
                                     <span><i class="icofont-double-right"></i>{{$cat->name}}</span></a>
                             </li>
-                            @endforeach --}}
+                            @endforeach 
                         </ul>
                     </div>
 

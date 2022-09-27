@@ -104,6 +104,51 @@
 
 
 <!-- category section start here -->
+<div class="course-section style-2 padding-tb section-bg-ash yellow-color-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle yellow-color">MESA VİP EĞİTİM KURUMLARI</span>
+            <h2 class="title">Duyurular</h2>
+            <div class="course-navigations">
+                <div class="course-navi course-navi-next"><i class="icofont-double-left"></i></div>
+                <div class="course-navi course-navi-prev"><i class="icofont-double-right"></i></div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="course-slider p-2">
+                <div class="swiper-wrapper">
+
+                    @foreach ($whatdo as $item)
+                        
+                   
+                    <div class="swiper-slide">
+                        <div class="course-item style-3">
+                            <div class="course-inner text-center">
+                                <div class="course-thumb">
+                                    <img src="{{asset('storage/whatdoing')}}/{{$item->image}}" alt="course">
+                                    <ul class="course-info lab-ul">
+                                        <li><span class="course-name">Mesa Vip</span></li>
+                                        <li><span class="price">Admin</span></li>
+                                       
+                                    </ul>
+                                </div>
+                                <div class="course-content">
+                                    <a href="{{route('whatdo.detail' , [$item->slug])}}"><h4>{{$item->title}}</h4></a>
+                                    <div class="course-details">
+                                        
+                                    </div>
+                                    <a href="{{route('whatdo.detail' , [$item->slug])}}" class="lab-btn"><span>Detay</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Course Section Ending Here -->
 
 @foreach ($lock as $item)
 
@@ -311,7 +356,7 @@
 
 
 <!-- student feedbak section start here -->
-<div class="student-feedbak-section padding-tb shape-img">
+    <div class="student-feedbak-section padding-tb shape-img">
     <div class="container">
         <div class="section-header text-center">
             <span class="subtitle">Sık Sourulan Sorular</span>
@@ -324,8 +369,7 @@
                         <div class="sfl-thumb">
                             <img src="{{asset('assets')}}/images/school/04.jpg" alt="student feedback">
                             <a href="https://www.youtube.com/embed/aOe6IKKRuEI" class="video-button" data-rel="lightcase"><i class="icofont-ui-play"></i></a>
-                            {{-- <iframe width="1268" height="713" src="https://www.youtube.com/embed/aOe6IKKRuEI" title="MESA VİP EĞİTİM KURUMLARI" frameborder="0"
-                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
+                           
                         </div>
                         
                     </div>
@@ -338,7 +382,9 @@
                             <div class="stu-feed-top">
                                 <div class="sft-left">
                                     <div class="sftl-thumb">
-                                        <img src="{{asset('assets')}}/images/feedback/student/01.jpg" alt="student feedback">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-question-fill" viewBox="0 0 16 16">
+                                            <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"/>
+                                          </svg>
                                     </div>
                                     <div class="sftl-content">
                                         <a href="#"><h6>{{$q->title}}</h6></a>
@@ -358,7 +404,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 <!-- student feedbak section ending here -->
 
 

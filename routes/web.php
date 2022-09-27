@@ -194,7 +194,7 @@ Route::get('/sss' , QuestionsComponent::class);
   Route::get('/haber/{slug}', BlogDetailComponent::class)->name('blog.detail');
   Route::get('/kategori/{category_slug}', CategoryDetailComponent::class)->name('blog.category');
   
-  Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
+//   Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
 
 
   Route::post('/sinav/basvurusu/onayla' , [BasvuruController::class , 'addApprow'])->name('add.basvuru.onay');
