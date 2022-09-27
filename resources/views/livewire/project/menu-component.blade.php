@@ -12,11 +12,10 @@
                 </ul>
                 <ul class="lab-ul social-icons d-flex align-items-center">
                     <li><p>Sosyal Medya </p></li>
-                    <li><a href="#" class="fb"><i class="icofont-facebook-messenger"></i></a></li>
-                    <li><a href="#" class="twitter"><i class="icofont-twitter"></i></a></li>
-                    <li><a href="#" class="vimeo"><i class="icofont-vimeo"></i></a></li>
-                    <li><a href="#" class="skype"><i class="icofont-skype"></i></a></li>
-                    <li><a href="#" class="rss"><i class="icofont-rss-feed"></i></a></li>
+                   
+                    <li><a href="https://www.instagram.com/mesavipkoleji/" class="twitter"><i class="icofont-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCmIfiCouv2u4OHXTuYIrxIw" class="vimeo"><i class="icofont-youtube"></i></a></li>
+                  
                 </ul>
             </div>
         </div>
@@ -43,8 +42,8 @@
                                 <ul class="lab-ul">
                                     <li><a href="/ekibimiz">Kadromuz</a></li>
                                     <li><a href="/hakkimizda">Misyon ve Vizyonumuz</a></li>
-                                    <li><a href="/">İnsan Kaynakları</a></li>
-                                    <li><a href="/">Belge ve Sertifikalarımız</a></li>
+                                     <li><a href="/insan-kaynaklari">İnsan Kaynakları</a></li> 
+                                    <li><a href="/belge-ve-sertifikalarımız">Belge ve Sertifikalarımız</a></li>
 
                                 </ul>
                             </li>
@@ -91,9 +90,11 @@
                                 <a href="#0">Duyurular</a>
                                 <ul class="lab-ul">
                                     <li><a href="/haberler">Bizden Haberler</a></li>
-                                    <li><a href="team.html">Basında Biz</a></li>
-                                    <li><a href="instructor.html">Deneme Sınavları</a></li>
-                                    <li><a href="instructor.html">Sınav Takvimi</a></li>
+                                    <li><a href="/duyurular">Duyurular</a></li>
+
+                                    {{-- <li><a href="team.html">Basında Biz</a></li> --}}
+                                    {{-- <li><a href="instructor.html">Deneme Sınavları</a></li>
+                                    <li><a href="instructor.html">Sınav Takvimi</a></li> --}}
                                     {{-- <li>
                                         <a href="#0">Shop Pages</a>
                                         <ul class="lab-ul">
@@ -110,11 +111,14 @@
                             <li>
                                 <a href="#0">Sosyal Etkinlikler</a>
                                 <ul class="lab-ul">
-                                    {{-- @foreach ($category as $cat)
-                                        
+{{--                                 
+                                   @foreach ($category as $cat)
+                                            
+                                       
                                     <li> <a href="{{route('social.category' , ['category_slug'  => $cat->slug ])}}">{{$cat->name}}</a>
                                     </li>
                                     @endforeach --}}
+                                
 
                                     {{-- <li>
                                         <a href="#0">Shop Pages</a>
@@ -133,9 +137,9 @@
                             <li><a href="/iletisim">İletişim</a></li>
                         </ul>
                     </div>
-                    
-                    <a href="/" class="login"><i class="icofont-phone"></i> <span>Ara</span> </a>
-                    <a href="/" class="signup"><i class="icofont-map"></i> <span>Harita</span> </a>
+                   
+                    <a href="tel:+03442110146" class="login"><i class="icofont-phone"></i> <span>Ara</span> </a>
+                    <a target="_blank" href="https://www.google.com/maps/place/Mesavip/@37.5979626,36.8264891,17z/data=!3m1!4b1!4m5!3m4!1s0x152ddc6055555555:0x711524bdfd0c3c0e!8m2!3d37.5979626!4d36.8286778" class="signup"><i class="icofont-map"></i> <span>Harita</span> </a>
 
                     <!-- toggle icons -->
                     <div class="header-bar d-lg-none">

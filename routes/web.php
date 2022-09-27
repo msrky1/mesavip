@@ -10,6 +10,7 @@ use App\Http\Livewire\Project\BlogComponent;
 use App\Http\Livewire\Project\AboutComponent;
 use App\Http\Livewire\Project\GaleryComponent;
 use App\Http\Livewire\Project\WhatdoComponent;
+use App\Http\Livewire\Project\CertificaComponent;
 use App\Http\Livewire\Project\Whatdo\WhatdoDetailComponent;
 use App\Http\Livewire\Project\Blog\BlogDetailComponent;
 use App\Http\Livewire\Project\ContactComponent;
@@ -29,6 +30,7 @@ use App\Http\Livewire\Project\Aducation\Social\Category\SocialCategoryComponent;
 
 use App\Http\Livewire\Admin\AdminHomeComponent;
 use App\Http\Livewire\Project\SearchComponent;
+use App\Http\Livewire\Project\HumanResourcesComponent;
 
 
 use App\Http\Livewire\Admin\AdminAboutComponent;
@@ -173,6 +175,8 @@ Route::post('/sinav/basvurusu/olustur/{name}' , [BasvuruController::class , 'pdf
 
 
 Route::get('/' , HomeComponent::class);
+Route::get('/insan-kaynaklari' , HumanResourcesComponent::class);
+Route::get('/belge-ve-sertifikalarımız' , CertificaComponent::class);
 Route::get('/galeri' , GaleryComponent::class);
 Route::get('/hakkimizda' , AboutComponent::class);  
 Route::get('/sss' , QuestionsComponent::class);

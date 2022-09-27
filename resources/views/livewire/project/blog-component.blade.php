@@ -64,7 +64,7 @@
                 @endforeach
 
             </div>
-            <ul class="default-pagination lab-ul">
+            {{-- <ul class="default-pagination lab-ul">
                 <li>
                     <a href="#"><i class="icofont-rounded-left"></i></a>
                 </li>
@@ -80,7 +80,7 @@
                 <li>
                     <a href="#"><i class="icofont-rounded-right"></i></a>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </div>
 </div>

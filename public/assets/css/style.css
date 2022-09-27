@@ -6660,8 +6660,29 @@ footer.style-2 .footer-top.dark-view * {
 	width:60px;
 	height:60px;
 	bottom:40px;
-	right:40px;
-	background-color:#25d366;
+	right:55px;
+	background-color:#ff0000;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+
+.my-float{
+  color: white;
+	margin-top:16px;
+}
+/*# sourceMappingURL=style.css.map */
+
+.float-youtube{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:130px;
+	background-color:#a2ff00;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -6670,10 +6691,16 @@ footer.style-2 .footer-top.dark-view * {
   z-index:100;
 }
 
-.my-float{
+.my-float-youtube{
 	margin-top:16px;
 }
-/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
 
 
 .button-one {

@@ -19,8 +19,8 @@
                             <ul class="lab-ul d-flex flex-wrap">
                                 <li><a href="/hakkimizda">Hakkımızda</a></li>
                                 <li><a href="/galeri">Galeri</a></li>
-                                <li><a href="/İletisim">İletişim</a></li>
-                                <li><a href="/bizden-haberler">Haberler</a></li>
+                                <li><a href="/iletisim">İletişim</a></li>
+                                <li><a href="/haberler">Haberler</a></li>
                             </ul>
                         </div>
                     </div>
@@ -37,10 +37,10 @@
     <div class="cbs-content-list d-none">
         <ul class="lab-ul">
             <li class="ccl-shape shape-1"><a href="#">10.000'den Fazla Mutlu Öğrenci</a></li>
-            <li class="ccl-shape shape-2"><a href="#">130 Derslik</a></li>
-            <li class="ccl-shape shape-3"><a href="/kadro">40+ Kadro</a></li>
-            <li class="ccl-shape shape-4"><a href="#">15+ Dil Kursu</a></li>
-            <li class="ccl-shape shape-5"><a href="/sosyal-etkinlikler">36+ Sosyal Etkinlikler</a></li>
+            <li class="ccl-shape shape-2"><a href="#">73 Derslik</a></li>
+            <li class="ccl-shape shape-3"><a href="/ekibimiz">100+ Kadro</a></li>
+            <li class="ccl-shape shape-4"><a href="#"> Cambridge University Press Desteği İle İngilizce Eğitimi</a></li>
+            <li class="ccl-shape shape-5"><a href="/sosyal-etkinlikler">Kulüp Çalışmaları</a></li>
         </ul>
     </div>
 </section>
@@ -421,50 +421,7 @@
         </div>
         <div class="section-wrapper">
             <div class="counter-part mb-4">
-                <div class="row g-4 row-cols-lg-4 row-cols-sm-2 row-cols-1 justify-content-center">
-                    <div class="col">
-                        <div class="count-item">
-                            <div class="count-inner">
-                                <div class="count-content">
-                                    <h2><span class="count" data-to="30" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Yılların Dil Eğitimi Deneyimi
-
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="count-item">
-                            <div class="count-inner">
-                                <div class="count-content">
-                                    <h2><span class="count" data-to="3080" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Kayıtlı Öğrencilerimiz</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="count-item">
-                            <div class="count-inner">
-                                <div class="count-content">
-                                    <h2><span class="count" data-to="330" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Nitelikli Öğretmenlerimiz</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="count-item">
-                            <div class="count-inner">
-                                <div class="count-content">
-                                    <h2><span class="count" data-to="2300" data-speed="1500"></span><span>+</span></h2>
-                                    <p>Yenilikçi Yabancı Dil Kursları</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="achieve-part">
                 <div class="row g-4 row-cols-1 row-cols-lg-2">

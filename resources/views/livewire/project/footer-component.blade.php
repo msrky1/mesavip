@@ -37,9 +37,9 @@
                                 </div>
                                 <div class="content">
                                     <ul class="lab-ul">
-                                        <li><a href="#">Geri Bildirim</a></li>
-                                        <li><a href="#">Eklentiler</a></li>
-                                        <li><a href="#">Destek Forumları</a></li>
+                                        <li><a href="/">Anasayfa</a></li>
+                                        <li><a href="/galeri">Eklentiler</a></li>
+                                        <li><a href="/insan-kaynaklari">İnsan Kaynakları</a></li>
 
                                     </ul>
                                 </div>
@@ -52,14 +52,13 @@
                         <div class="footer-inner">
                             <div class="footer-content">
                                 <div class="title">
-                                    <h4>Kullanışlu Bağlantolar</h4>
+                                    <h4>Kullanışlı Bağlantılar</h4>
                                 </div>
                                 <div class="content">
                                     <ul class="lab-ul">
-                                        <li><a href="#">Hakkımızda</a></li>
-                                        <li><a href="#">Yardım </a></li>
-                                        <li><a href="#">Şartlar ve Koşullar</a></li>
-                                        <li><a href="#">Bize Ulaşın</a></li>
+                                        <li><a href="/hakkimizda">Hakkımızda</a></li>
+                                        <li><a href="/ekibmiz">Ekibmiz </a></li>
+                                        <li><a href="/iletisim">Bize Ulaşın</a></li>
                                         <li><a href="#">Gizlilik Politikası</a></li>
                                     </ul>
                                 </div>
@@ -76,9 +75,9 @@
                                 </div>
                                 <div class="content">
                                     <ul class="lab-ul">
-                                        <li><a href="#">Facebook</a></li>
-                                        <li><a href="#">Instagram</a></li>
-                                        <li><a href="#">YouTube</a></li>
+                           
+                                        <li><a href="https://www.instagram.com/mesavipkoleji/">Instagram</a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCmIfiCouv2u4OHXTuYIrxIw">YouTube</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -90,14 +89,14 @@
                         <div class="footer-inner">
                             <div class="footer-content">
                                 <div class="title">
-                                    <h4>Bize Ulaşma Kanalları</h4>
+                                    <h4>Aktif Bağlantılar</h4>
                                 </div>
                                 <div class="content">
                                     <ul class="lab-ul">
-                                        <li><a href="#">Yardım Merkezi</a></li>
-                                        <li><a href="#">İletişim</a></li>
-                                        <li><a href="#">Haberler</a></li>
-                                        <li><a href="#">Kanalımız</a></li>
+                                      
+                                        <li><a href="/haberler">Haberler</a></li>
+                                        <li><a href="/duyurular">Duyurular</a></li>
+                                  
                                     </ul>
                                 </div>
                             </div>

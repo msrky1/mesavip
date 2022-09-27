@@ -144,7 +144,7 @@
                             <!--//nav-link-->
                         </li>
                         <!--//nav-item-->
-                       <li class="nav-item">
+                       {{-- <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link {{ request()->is('admin/slider*') ? 'active' : '' }}"
                                 href="/admin/slider">
@@ -157,7 +157,7 @@
 
                             </a>
                             <!--//nav-link-->
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->

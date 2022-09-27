@@ -8,6 +8,6 @@ class CertificaComponent extends Component
 {
     public function render()
     {
-        return view('livewire.project.certifica-component');
+        return view('livewire.project.certifica-component')->layout('layouts.base');
     }
 }

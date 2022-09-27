@@ -46,9 +46,14 @@
     <!-- Footer Section Ending Here -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+    <a href="https://www.instagram.com/mesavipkoleji/"
         class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
+        <i class="fa fa-instagram my-float"></i>
+    </a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://www.youtube.com/channel/UCmIfiCouv2u4OHXTuYIrxIw"
+        class="float-youtube" target="_blank">
+        <i class="fa fa-youtube my-float-youtube"></i>
     </a>
     </div>
     <!-- footer -->
