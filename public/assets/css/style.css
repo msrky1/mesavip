@@ -6696,6 +6696,28 @@ footer.style-2 .footer-top.dark-view * {
 }
 
 
+.float-basvuru{
+	position:fixed;
+	
+	bottom:770px;
+  right: 40px;
+	
+  /* margin-top: 25px; */
+
+  z-index:1000;
+}
+
+.my-float-basvuru{
+
+ 
+  background-color: #302783;
+  width: 100px;
+  border-radius: 5px;
+  /* height: 50px; */
+  
+
+  
+}
 
 
 
@@ -6715,12 +6737,3 @@ footer.style-2 .footer-top.dark-view * {
 
 }
 
-.button-one:hover {
-
-  background-color: #00a556;
-  border-radius: 25px;
-  color: white;
-
-  width: 83px;
-  height: 55px;
-}

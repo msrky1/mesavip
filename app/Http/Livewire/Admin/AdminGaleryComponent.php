@@ -4,7 +4,9 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Galery;
+use App\Models\GaleryCategory;
 use File;
+
 
 class AdminGaleryComponent extends Component
 {
@@ -26,11 +28,12 @@ class AdminGaleryComponent extends Component
     
     public function render()
     {
-
+       
+        $category = GaleryCategory::all();
         
         $galery = Galery::all();
 
 
-        return view('livewire.admin.admin-galery-component' , ['galery' => $galery])->layout('layouts.admin');
+        return view('livewire.admin.admin-galery-component' , ['galery' => $galery , 'category' => $category])->layout('layouts.admin');
     }
 }

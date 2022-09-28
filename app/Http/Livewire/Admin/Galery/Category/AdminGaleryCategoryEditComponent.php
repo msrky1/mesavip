@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Category;
+namespace App\Http\Livewire\Admin\Galery\Category;
 
 use Livewire\Component;
-use App\Models\Category;
-use App\Models\Notification;
+use App\Models\GaleryCategory;
 use Illuminate\Support\Str;
-class CategoryEditComponent extends Component
-{ 
 
+class AdminGaleryCategoryEditComponent extends Component
+{
     public $name;
     public $slug;
     public $category_id;
@@ -17,7 +16,7 @@ class CategoryEditComponent extends Component
 
     public function mount ($category_id) {
            
-        $category = Category::where('id' , $category_id)->first();
+        $category = GaleryCategory::where('id' , $category_id)->first();
 
         $this->name = $category->name;
         $this->slug = $category->slug;
@@ -38,23 +37,18 @@ class CategoryEditComponent extends Component
      public function updateCategory() {
 
 
-            $category = Category::find($this->category_id);
+            $category = GaleryCategory::find($this->category_id);
             $category->name = $this->name;
             $category->slug = $this->slug;
 
             $category->save();
-            $notification = new Notification();
-            $notification->name = $this->name;
-            $notification->notification = 'Yeni bir Kategori Düzenlendi!';
-            $notification->color = 'info';
-            $notification->save();
+          
             session()->flash('message' , 'Kategori Güncellendi');
 
 
      }
-
     public function render()
     {
-        return view('livewire.admin.category.category-edit-component')->layout('layouts.admin');
+        return view('livewire.admin.galery.category.admin-galery-category-edit-component')->layout('layouts.admin');
     }
 }

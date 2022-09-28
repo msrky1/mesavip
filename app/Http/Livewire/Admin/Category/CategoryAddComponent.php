@@ -5,11 +5,19 @@ namespace App\Http\Livewire\Admin\Category;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Notification;
+use Illuminate\Support\Str;
 class CategoryAddComponent extends Component
 {
 
        public $name;
+       public $slug;
+
        
+    public function generateSlug(){
+
+        $this->slug  = Str::slug($this->name ,'-');
+
+  }
 
 
        public function categoryAdd() {
@@ -17,6 +25,7 @@ class CategoryAddComponent extends Component
            
            $category = new Category();
            $category->name = $this->name;
+           $category->slug = $this->slug;
            
            $category->save();
       

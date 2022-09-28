@@ -10,6 +10,7 @@ use App\Http\Livewire\Project\BlogComponent;
 use App\Http\Livewire\Project\AboutComponent;
 use App\Http\Livewire\Project\GaleryComponent;
 use App\Http\Livewire\Project\WhatdoComponent;
+use App\Http\Controllers\HumanController;
 use App\Http\Livewire\Project\CertificaComponent;
 use App\Http\Livewire\Project\Whatdo\WhatdoDetailComponent;
 use App\Http\Livewire\Project\Blog\BlogDetailComponent;
@@ -50,6 +51,8 @@ use App\Http\Livewire\Admin\AdminNotificationComponent;
 
 use App\Http\Livewire\Admin\Galery\GaleryAddComponent;
 use App\Http\Livewire\Admin\Galery\GaleryEditComponent;
+use App\Http\Livewire\Admin\Galery\Category\AdminGaleryCategoryAddComponent;
+use App\Http\Livewire\Admin\Galery\Category\AdminGaleryCategoryEditComponent;
 
 
 use App\Http\Livewire\Admin\Quaestion\QuestionAddComponent;
@@ -194,7 +197,7 @@ Route::get('/sss' , QuestionsComponent::class);
   Route::get('/haber/{slug}', BlogDetailComponent::class)->name('blog.detail');
   Route::get('/kategori/{category_slug}', CategoryDetailComponent::class)->name('blog.category');
   
-//   Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
+ Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
 
 
   Route::post('/sinav/basvurusu/onayla' , [BasvuruController::class , 'addApprow'])->name('add.basvuru.onay');
@@ -204,6 +207,8 @@ Route::get('/sss' , QuestionsComponent::class);
 
 
 
+
+  Route::post('/basvurusu/gonder' , [HumanController::class , 'addCv'])->name('add.basvuru.cv');
 
 
 
@@ -226,6 +231,10 @@ Route::get('/admin/home' , AdminHomeComponent::class)->name('admin.home');
 Route::get('/admin/slider' , AdminSliderComponent::class)->name('admin.slider');
 Route::get('/admin/slider/add' , SliderAddComponent::class)->name('admin.slider.add');
 Route::get('/admin/slider/edit/{slider_id}' , SliderEditComponent::class)->name('admin.slider.edit');
+
+
+Route::get('/admin/galery/category/add' , AdminGaleryCategoryAddComponent::class)->name('admin.galery.cagetory.add');
+Route::get('/admin/galery/category/edit/{category_id}' , AdminGaleryCategoryEditComponent::class)->name('admin.galery.cagetory.edit');
 
 
 Route::get('/admin/settings' , AdminSettingComponent::class)->name('admin.setting');

@@ -36,6 +36,19 @@
                                             @enderror </div>
 
                                     </div>
+
+                                    <div class="mb-3">
+                                     
+                                            
+
+
+                                        @csrf
+                                        <label for="setting-input-2" class="form-label">Kategori Adı </label>:
+                                        <input type="text" name="slug" class="form-control" wire:model="slug"
+                                        wire:keyup="generateSlug" required>
+                                        
+
+                                    </div>
                                   
 
                                     <button class="btn app-btn-primary" type="submit">

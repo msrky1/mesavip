@@ -22,15 +22,24 @@
                             @endif
                             <div class="app-card-body">
                                 <form wire:submit.prevent="categoryAdd()">
+
+                                    @csrf
                                     <div class="mb-3">
-                                     
-                                            
-
-
-                                        @csrf
+                               
                                         <label for="setting-input-2" class="form-label">Kategori Adı </label>:
                                         <input type="text" name="name" class="form-control" wire:model="name"
                                             required>
+                                        <div> @error('title')
+                                                {{ $message }}
+                                            @enderror </div>
+
+                                    </div>
+                                    <div class="mb-3">
+                               
+                                        <label for="setting-input-2" class="form-label">Kategori Adı </label>:
+                                        <input type="text" name="slug" class="form-control" wire:model="slug"
+                                         wire:keyup = "generateSlug()"   required>
+
                                         <div> @error('title')
                                                 {{ $message }}
                                             @enderror </div>

@@ -3,12 +3,12 @@
 
         <div class="app-content pt-3 p-md-3 p-lg-4">
             <div class="container-xl">
-                <h1 class="app-page-title">Kategori Ekle</h1>
+                <h1 class="app-page-title">Kategori</h1>
                 <hr class="mb-4">
                 <div class="row g-4 settings-section">
                     <div class="col-12 col-md-4">
-                        <h3 class="section-title">Kategori Ekle</h3>
-                        <div class="section-intro">Kategori eklemek için Boş Alanı Dolduurun<a href="{{ route('admin.help') }}"><br>
+                        <h3 class="section-title">Kategori Düzenle</h3>
+                        <div class="section-intro">Kategori ögesini düzenleyin<a href="{{ route('admin.help') }}"><br>
                                 Daha
                                 Fazla Öğren</a></div>
                     </div>
@@ -17,13 +17,16 @@
                             @if (Session::has('message'))
                                 <div class="alert alert-success">
                                     <strong>{{ Session::get('message') }}</strong> <a style="color: red"
-                                        href="{{ route('admin.category') }}"> Kategoriler Görüntüle</a>
+                                        href="{{ route('admin.galery') }}"> Kategorileri Görüntüle!</a>
                                 </div>
                             @endif
                             <div class="app-card-body">
-                                <form wire:submit.prevent="categoryAdd()">
+                                <form wire:submit.prevent="updateCategory()">
                                     <div class="mb-3">
                                      
+                                            
+
+
                                         @csrf
                                         <label for="setting-input-2" class="form-label">Kategori Adı </label>:
                                         <input type="text" name="name" class="form-control" wire:model="name"
@@ -33,21 +36,23 @@
                                             @enderror </div>
 
                                     </div>
+
                                     <div class="mb-3">
                                      
-                                     
+                                            
+
+
+                                        @csrf
                                         <label for="setting-input-2" class="form-label">Kategori Adı </label>:
-                                        <input type="text"  class="form-control" wire:model="slug"  wire:keyup="generateSlug"
-                                            required>
-                                        <div> @error('title')
-                                                {{ $message }}
-                                            @enderror </div>
+                                        <input type="text" name="slug" class="form-control" wire:model="slug"
+                                        wire:keyup="generateSlug" required>
+                                        
 
                                     </div>
-                                   
+                                  
 
                                     <button class="btn app-btn-primary" type="submit">
-                                        Kaydet
+                                        Güncelle
                                     </button>
                                 </form>
 
@@ -97,7 +102,7 @@
                     </div>
                 </div>
                 <!--//row-->
-               
+         
             </div>
             <!--//container-fluid-->
         </div>

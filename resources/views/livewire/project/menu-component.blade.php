@@ -111,13 +111,13 @@
                             <li>
                                 <a href="#0">Sosyal Etkinlikler</a>
                                 <ul class="lab-ul">
-{{--                                 
+                         
                                    @foreach ($category as $cat)
                                             
                                        
                                     <li> <a href="{{route('social.category' , ['category_slug'  => $cat->slug ])}}">{{$cat->name}}</a>
                                     </li>
-                                    @endforeach --}}
+                                    @endforeach
                                 
 
                                     {{-- <li>

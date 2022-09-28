@@ -25,27 +25,74 @@
         <div class="section-header text-center">
             <span class="subtitle"> Lütfen Formu Doldurunuz </span>
             <h2 class="title">En Yakın Zamanda Size Dönüş Yapılacaktır. Lütfen Formu Eksiksiz Doldurun.</h2>
+            @if (\Session::has('success'))
+         <div class="alert alert-success">
+      
+           {!! \Session::get('success') !!}
+     
+    </div>
+           @endif
+              
         </div>
+       
         <div class="section-wrapper">
-            <form class="contact-form" action="contact.php" id="contact-form" method="POST">
+
+
+            <form class="contact-form" method="POST" enctype="multipart/form-data" action="{{route("add.basvuru.cv")}}">
+
+                @csrf
                 <div class="form-group">
-                    <input type="text" placeholder="Adınız Soyadınız" id="name" name="name" required>
+                    <input type="text" placeholder="Adınız Soyadınız" name="name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Mail Adresiniz" id="email" name="email" required>
+                    <input type="text" placeholder="Mail Adresiniz"  name="email"  required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Telefon Numaranız" id="phone" name="phone" required>
+                    <input type="text" placeholder="Telefon Numaranız"  name="number"  required>
+                </div>
+                <div class="form-group">
+                    <select name="area" required>
+                       
+                        <option> Alanı </option>
+                        <option id="teach"> Öğtetmen </option>
+                        <option> Temizlik Görevlisi </option>
+                        <option> Muhasebe </option>
+                        <option> Diğer </option>
+                        
+                        
+                     
+                    </select>
+                </div>
+
+                 
+            
+                
+                <div class="form-group" >
+                    <select name="branch" >
+                       
+                        <option> İngilizce Öğretmeni </option>
+                        <option> Sınıf Öğretmeni </option>
+                        <option> Matematik Öğretmeni</option>
+                        <option> Bilgisayar Öğretmeni </option>
+                        <option> Edebiyat Öğretmeni </option>
+                        <option> Felsefe Öğretmeni </option>
+                        <option> Diğer </option>
+                     
+                        
+                        
+                     
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Lütfen CV nizi Ekleyin</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name="cv">
                   </div>
 
                 
-                <div class="form-group w-100 text-center">
-                    <button class="lab-btn"><span>Gönder</span></button>
-                </div>
+                  <button class="lab-btn" type="submit">
+                  <span>  Gönder </span>
+                </button> 
+               
             </form>
             <p class="form-message"></p> 
         </div>

@@ -4,12 +4,22 @@ namespace App\Http\Livewire\Admin\Aducation\Social\Category;
 
 use Livewire\Component;
 use App\Models\SocialCategory;
+use Illuminate\Support\Str; 
+
 
 
 class AdminSocialCategoryUpdateComponent extends Component
 {
     public $name;
     public $category_id;
+    public $slug;
+
+       
+    public function generateSlug(){
+
+        $this->slug  = Str::slug($this->name ,'-');
+
+  }
 
 
     public function mount ($category_id) {
@@ -17,6 +27,7 @@ class AdminSocialCategoryUpdateComponent extends Component
         $category = SocialCategory::where('id' , $category_id)->first();
 
         $this->name = $category->name;
+        $this->slug = $category->slug;
         $this->category_id = $category->id;
 
 
@@ -29,6 +40,7 @@ class AdminSocialCategoryUpdateComponent extends Component
 
             $category = SocialCategory::find($this->category_id);
             $category->name = $this->name;
+            $category->slug = $this->slug;
             $category->save();
             session()->flash('message' , 'Kategori Güncellendi');
 
