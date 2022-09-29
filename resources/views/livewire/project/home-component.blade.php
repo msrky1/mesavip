@@ -25,9 +25,12 @@
                         </div>
                     </div>
                 </div>
+                @foreach ($slider as $item)
+                    
+         
                 <div class="col-xxl-7 col-xl-6">
                     <div class="banner-thumb">
-                         <img src="{{asset('assets')}}/images/banner/01.png" alt="img">  
+                         <img src="{{asset('storage\image')}}/{{$item->image}}" alt="img">  
                     </div>
                 </div>
             </div>
@@ -36,13 +39,14 @@
     <div class="all-shapes"></div>
     <div class="cbs-content-list d-none">
         <ul class="lab-ul">
-            <li class="ccl-shape shape-1"><a href="#">10.000'den Fazla Mutlu Öğrenci</a></li>
-            <li class="ccl-shape shape-2"><a href="#">73 Derslik</a></li>
-            <li class="ccl-shape shape-3"><a href="/ekibimiz">100+ Kadro</a></li>
-            <li class="ccl-shape shape-4"><a href="#"> Cambridge University Press Desteği İle İngilizce Eğitimi</a></li>
-            <li class="ccl-shape shape-5"><a href="/sosyal-etkinlikler">Kulüp Çalışmaları</a></li>
+            <li class="ccl-shape shape-1"><a href="#">{{$item->title}}</a></li>
+            <li class="ccl-shape shape-2"><a href="#">{{$item->title2}}</a></li>
+            <li class="ccl-shape shape-3"><a href="/ekibimiz">{{$item->title3}}</a></li>
+            <li class="ccl-shape shape-4"><a href="#">{{$item->title4}}</a></li>
+            <li class="ccl-shape shape-5"><a href="/sosyal-etkinlikler">{{$item->title5}}</a></li>
         </ul>
     </div>
+    @endforeach
 </section>
 <!-- banner section ending here -->
 

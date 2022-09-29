@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="contact-content">
                                     <h6 class="title">Telefon</h6>
-                                    <p> {{$item->phone}}</p>
+                                    <p> {{$item->contact}}</p>
                                 </div>
                             </div>
                             <div class="contact-item">

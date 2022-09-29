@@ -36,7 +36,7 @@ class SocialCategoryDetailComponent extends Component
 
 
         $categories = SocialCategory::All();
-    
+        
         $blogs = Social::where('category_id' , $category->id)->orderBy('category_id',  'DESC')->paginate(10);
         return view('livewire.project.aducation.social.category.social-category-detail-component' , ['blogs' => $blogs , 'categories' => $categories, 'category_name' => $category_name])->layout('layouts.base');
     }

@@ -22,52 +22,60 @@
                             @endif
                             <div class="app-card-body">
                                 <form wire:submit.prevent="updateSlider()">
+
+                                    @csrf
+                                    
                                     <div class="mb-3">
-                                     
-                                            
-
-
-                                        @csrf
                                         <label for="setting-input-2" class="form-label">Başlık </label>:
                                         <input type="text" name="title" class="form-control" wire:model="title"
                                             required>
-                                        <div> @error('title')
-                                                {{ $message }}
-                                            @enderror </div>
+
 
                                     </div>
-                                    <div class="mb-3" wire:ignore>
-                                        <label for="setting-input-2" class="form-label">İçerik </label>:
-                                        <textarea wire:model.defer="description" class="form-control" id="description" name="description">{!! $description !!}
-                                        
-                                        </textarea>
+                                    <div class="mb-3">
+                                        <label for="setting-input-2" class="form-label">Başlık </label>:
+                                        <input type="text" name="title" class="form-control" wire:model="title2"
+                                            required>
+
+
                                     </div>
                                     <div class="mb-3">
-                                        <label for="setting-input-3" class="form-label">Link</label>:
-                                        <input type="text" name="link" class="form-control" id="setting-input-3"
-                                            wire:model="link">
+                                        <label for="setting-input-2" class="form-label">Başlık </label>:
+                                        <input type="text" name="title" class="form-control" wire:model="title3"
+                                            required>
+
+
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-2" class="form-label">Başlık </label>:
+                                        <input type="text" name="title" class="form-control" wire:model="title4"
+                                            required>
+
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="setting-input-2" class="form-label">Başlık </label>:
+                                        <input type="text" name="title" class="form-control" wire:model="title5"
+                                            required>
+
+
+                                    </div>
+
                                     <div class="mb-3">
                                         <input type="file" name="image" wire:model="newimage" />
                                     </div>
-                                   
+
                                     <div class="mb-3">
-                                   
+
                                         @if ($newimage)
-                                        <img src="{{$newimage->temporaryUrl()}}" width="120">
-
-                           
-                                            
+                                            <img src="{{ $newimage->temporaryUrl() }}" width="120">
                                         @else
-
-                                        <img src="{{asset('storage/image')}}/{{$image}}" width="120">   
-
-                             
-                                    @endif
+                                            <img src="{{ asset('storage/image') }}/{{ $image }}" width="120">
+                                        @endif
                                     </div>
                                     <div class="mb-3">
 
-                                   
+
                                     </div>
 
 

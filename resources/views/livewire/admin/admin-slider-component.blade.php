@@ -14,12 +14,12 @@
                 <!--//row-->
 
 
-                <div class="col-auto">
+                {{-- <div class="col-auto">
                     <a class="btn app-btn-primary" href="{{ route('admin.slider.add') }}">
 
                         Yeni Slider
                     </a>
-                </div>
+                </div> --}}
                 @if (Session::has('message'))
                     <div class="alert alert-success">
                         <strong>{{ Session::get('message') }}</strong>
@@ -38,9 +38,11 @@
                                             <tr>
                                                 <th class="cell">id</th>
                                                 <th class="cell">Resim</th>
-                                                <th class="cell">Ön Yazı</th>
-                                                <th class="cell">İçerik Detay Yazı</th>
-                                                <th class="cell">Gideceği Sayfa Linki</th>
+                                                <th class="cell">Yazı 1</th>
+                                                <th class="cell">Yazı 2 </th>
+                                                <th class="cell">Yazı 3 </th>
+                                                <th class="cell">Yazı 4</th>
+                                                <th class="cell">Yazı 5 </th>
                                                 <th class="cell">Aksiyonlar</th>
                                                 <th class="cell"></th>
                                             </tr>
@@ -51,20 +53,28 @@
                                                     <td class="cell">#{{ $s->id }}</td>
                                                     <td class="cell"><img width="150px"
                                                             src="{{ asset('storage/image') }}/{{ $s->image }}"
-                                                            alt="{{ $s->title }}"></td>
+                                                            ></td>
 
-                                                    <td class="cell"><span
-                                                            class="truncate">{{ $s->title }}</span></td>
-                                                    <td class="cell">{{ $s->description }}</td>
-                                                    <td class="cell">{{ $s->link }}</td>
+                                                    <td class="cell"><span class="truncate">{{ $s->title }}</span>
+                                                    </td>
 
+                                                    <td class="cell"><span class="truncate">{{ $s->title2 }}</span>
+                                                    </td>
+
+                                                    <td class="cell"><span class="truncate">{{ $s->title3 }}</span>
+                                                    </td>
+
+                                                    <td class="cell"><span class="truncate">{{ $s->title4 }}</span>
+                                                    </td>
+                                                    <td class="cell"><span class="truncate">{{ $s->title5 }}</span>
+                                                    </td>
                                                     <td class="cell"><a class="btn-sm app-btn-secondary"
                                                             href="{{ route('admin.slider.edit', ['slider_id' => $s->id]) }}">Düzenle
 
                                                         </a>
-                                                        <a href="#" class="btn-sm app-btn-danger"
+                                                        {{-- <a href="#" class="btn-sm app-btn-danger"
                                                             wire:click.prevent="deleteSlider({{ $s->id }})">
-                                                            Sil </a>
+                                                            Sil </a> --}}
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -106,8 +116,8 @@
                                                 <td class="cell"><span class="truncate">Lorem ipsum
                                                         dolor sit amet eget volutpat erat</span></td>
                                                 <td class="cell">John Sanders</td>
-                                                <td class="cell"><span>17 Oct</span><span
-                                                        class="note">2:16 PM</span></td>
+                                                <td class="cell"><span>17 Oct</span><span class="note">2:16
+                                                        PM</span></td>
                                                 <td class="cell"><span class="badge bg-success">Paid</span>
                                                 </td>
                                                 <td class="cell">$259.35</td>
@@ -194,8 +204,7 @@
                                                 <td class="cell">Dylan Ambrose</td>
                                                 <td class="cell"><span class="cell-data">16
                                                         Oct</span><span class="note">03:16 AM</span></td>
-                                                <td class="cell"><span
-                                                        class="badge bg-warning">Pending</span></td>
+                                                <td class="cell"><span class="badge bg-warning">Pending</span></td>
                                                 <td class="cell">$96.20</td>
                                                 <td class="cell"><a class="btn-sm app-btn-secondary"
                                                         href="#">View</a></td>
@@ -236,8 +245,7 @@
                                                 <td class="cell">Reina Brooks</td>
                                                 <td class="cell"><span class="cell-data">12
                                                         Oct</span><span class="note">04:23 PM</span></td>
-                                                <td class="cell"><span
-                                                        class="badge bg-danger">Cancelled</span></td>
+                                                <td class="cell"><span class="badge bg-danger">Cancelled</span></td>
                                                 <td class="cell">$59.00</td>
                                                 <td class="cell"><a class="btn-sm app-btn-secondary"
                                                         href="#">View</a></td>

@@ -13,7 +13,7 @@ class AdminHumanComponent extends Component
     {
         $blog = Human::find($id);    
        $blog->delete();
-        session()->flash('message' , 'Mesaj Başarıyla Slindi!');
+        session()->flash('message' , 'CV Başarıyla Slindi!');
     
     
         

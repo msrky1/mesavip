@@ -5,38 +5,40 @@ namespace App\Http\Livewire\Project\Aducation\Social;
 use Livewire\Component;
 use App\Models\SocialCategory;
 use App\Models\Social;
+use App\Models\Category;
+use App\Models\Blog;
 use Livewire\WithPagination;
 use Carbon\Carbon;
 
 class SocialDetailComponent extends Component
 {
 
-    public $category_slug;
-     
-    use WithPagination;
+   
+    
+    public $slug;
 
 
-    public function mount($category_slug) {
+    public function mount($slug) {
 
-     $this->category_slug = $category_slug;
-        
+
+        $this->$slug = $slug;
     }
 
-    
+
 
 
     public function render()
-    {
+    { 
+
 
         Carbon::setLocale('tr');
-        $category = SocialCategory::where('slug' , $this->category_slug)->first();
-        $category_id = $category->id;
-        $category_name = $category->name;
-
-
-        $categories = SocialCategory::All();
-    
-        $blogs = Social::where('category_id' , $category->id)->orderBy('category_id',  'DESC')->paginate(10);
-        return view('livewire.project.aducation.social.social-detail-component', ['blogs' => $blogs , 'categories' => $categories, 'category_name' => $category_name])->layout('layouts.base');
+        
+        $blogRecent = Blog::paginate(5);
+        $category = Category::paginate(5);
+        
+        $blog = Social::where('slug' , $this->slug)->first();
+        return view('livewire.project.aducation.social.social-detail-component', [
+            'blog' => $blog , 'blogRecent' => $blogRecent, 'category' => $category
+        ])->layout('layouts.base');
     }
 }

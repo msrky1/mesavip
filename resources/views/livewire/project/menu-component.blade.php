@@ -142,11 +142,28 @@
                             </li>
                             <li><a href="/galeri">Galeri</a></li>
                             <li><a href="/iletisim">İletişim</a></li>
+                            <li>
+                                <a href="#0">Eğitim Birimleri</a>
+                                <ul class="lab-ul">
+                            
+                                        
+                                    
+                                    <li>
+                                        <a href="https://www.google.com/maps/place/Mesavip/@37.5979626,36.8264891,17z/data=!3m1!4b1!4m5!3m4!1s0x152ddc6055555555:0x711524bdfd0c3c0e!8m2!3d37.5979626!4d36.8286778">Üngüt Şube <i class="icofont-map"></i>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="https://www.google.com/maps/place/Mesavip/@37.5979626,36.8264891,17z/data=!3m1!4b1!4m5!3m4!1s0x152ddc6055555555:0x711524bdfd0c3c0e!8m2!3d37.5979626!4d36.8286778">Binevler Şubesi<i class="icofont-map"></i>
+                                        </a>
+                                    </li>                                   
+                                 
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                    
                     <a href="tel:+03442110146" class="login"><i class="icofont-phone"></i> <span>Ara</span> </a>
-                    <a target="_blank" href="https://www.google.com/maps/place/Mesavip/@37.5979626,36.8264891,17z/data=!3m1!4b1!4m5!3m4!1s0x152ddc6055555555:0x711524bdfd0c3c0e!8m2!3d37.5979626!4d36.8286778" class="signup"><i class="icofont-map"></i> <span>Harita</span> </a>
+                    
 
                     <!-- toggle icons -->
                     <div class="header-bar d-lg-none">

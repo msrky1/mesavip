@@ -89,6 +89,10 @@ use App\Http\Livewire\Admin\Whatdo\WhatDoingAddComponent;
 use App\Http\Livewire\Admin\Whatdo\WhatDoingEditComponent;
 
 
+
+use App\Http\Livewire\Admin\Bursluluk\AdminBurslulukComponent;
+use App\Http\Livewire\Admin\Bursluluk\AdminBurslulukEditComponent;
+
 use App\Http\Livewire\Admin\AdminSliderComponent;
 use App\Http\Livewire\Admin\Slider\SliderAddComponent;
 use App\Http\Livewire\Admin\Slider\SliderEditComponent;
@@ -105,6 +109,7 @@ use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\Admin\Accept\AcceptedComponent;
 use App\Http\Livewire\Admin\Lock\LockComponent;
 use App\Http\Livewire\Project\Thanks\ThankyouComponent;
+use App\Http\Livewire\Project\Aducation\Social\SocialDetailComponent;
 
 
 
@@ -201,6 +206,7 @@ Route::get('/sss' , QuestionsComponent::class);
   Route::get('/kategori/{category_slug}', CategoryDetailComponent::class)->name('blog.category');
   
  Route::get('/sosyal-etkinlikler/{category_slug}', SocialCategoryDetailComponent::class)->name('social.category');
+ Route::get('/sosyal-etkinlikler/detay/{slug}', SocialDetailComponent::class)->name('social.detail');
 
 
   Route::post('/sinav/basvurusu/onayla' , [BasvuruController::class , 'addApprow'])->name('add.basvuru.onay');
@@ -252,6 +258,9 @@ Route::get('/admin/about' , AdminAboutComponent::class)->name('admin.about');
 Route::get('/admin/about/edit/{about_id}' , AboutEditComponent::class)->name('admin.about.edit');
 
 
+
+Route::get('/admin/bursluluk' , AdminBurslulukComponent::class)->name('admin.bursluluk');
+Route::get('/admin/bursluluk/{scholarship_id}' , AdminBurslulukEditComponent::class)->name('admin.bursluluk.edit');
 // Admin Blog 
 
 Route::get('/admin/blog' , AdminBlogComponent::class)->name('admin.blog');

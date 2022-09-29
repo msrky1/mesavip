@@ -16,6 +16,11 @@ class SliderEditComponent extends Component
     use WithFileUploads;
 
     public $title; 
+    public $title1; 
+    public $title2; 
+    public $title3; 
+    public $title4; 
+    public $title5; 
     public $description;
     public $link;
     public $image;  
@@ -28,10 +33,14 @@ class SliderEditComponent extends Component
   
         $slider = Slider::where('id', $slider_id)->first();
         $this->title =  $slider->title;
-        $this->description =  $slider->description;
+      
+        $this->title2 =  $slider->title2;
+        $this->title3 =  $slider->title3;
+        $this->title4 =  $slider->title4;
+        $this->title5 =  $slider->title5;
+       
         $this->image =  $slider->image;
-        $this->title =  $slider->title;
-        $this->link =  $slider->link;
+ 
       
         $this->slider_id = $slider->id;
 
@@ -47,9 +56,11 @@ class SliderEditComponent extends Component
        {
             $slider = Slider::find($this->slider_id);      
            $slider->title = $this->title;
-           $slider->description = $this->description;
-           $slider->link = $this->link;
-    
+           $slider->title2 = $this->title2;
+           $slider->title3 = $this->title3;
+           $slider->title4 = $this->title4;
+           $slider->title5 = $this->title5;
+     
       
            if ($this->newimage){
             $imageName = Carbon::now()->timestamp. '.' . $this->newimage->extension();

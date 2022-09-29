@@ -54,7 +54,7 @@
                                                    
                                                      
                                                     </td>
-                                                    <td class="cell"><a href="{{ $b->email }}">  {{ $b->email }} </a></td>
+                                                    <td class="cell"><a href="mailto:{{ $b->email }}">  {{ $b->email }} </a></td>
                                                     <td class="cell">{{ $b->number }}</td>
                                                     <td class="cell">{{ $b->area }}</td>
                                                     <td class="cell">{{ $b->branch }}</td>      
