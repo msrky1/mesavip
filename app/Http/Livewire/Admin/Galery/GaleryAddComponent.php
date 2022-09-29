@@ -7,7 +7,7 @@ use File;
 use Livewire\WithFileUploads; 
 use Carbon\Carbon;
 use App\Models\Galery;
-
+use App\Models\GaleryCategory;
 class GaleryAddComponent extends Component
 { 
 
@@ -15,6 +15,7 @@ class GaleryAddComponent extends Component
     use WithFileUploads;
 
     public $images = [];
+   
 
 
      public function save() {
@@ -29,14 +30,22 @@ class GaleryAddComponent extends Component
  
           
         foreach ($this->images as $key => $image) {
+
             $this->images[$key] = $image->store('galery','public');
- 
+         
+
             
-            Galery::create(['image' => $image->hashName()]);
+            
+
+            Galery::create(['image' => $image->hashName() ]);
+         
        
        
         }
 
+    
+        
+        
     
 
 
@@ -47,6 +56,8 @@ class GaleryAddComponent extends Component
     public function render()
     {
 
-        return view('livewire.admin.galery.galery-add-component')->layout('layouts.admin');
+        $category = GaleryCategory::all();
+
+        return view('livewire.admin.galery.galery-add-component' , ['category' => $category])->layout('layouts.admin');
     }
 }

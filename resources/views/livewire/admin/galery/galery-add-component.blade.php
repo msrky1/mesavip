@@ -30,6 +30,7 @@
 
                                 <form wire:submit.prevent="save">
 
+                                  
 
                                     <input type="file" wire:model="images" required multiple>
 

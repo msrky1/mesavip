@@ -48,11 +48,14 @@ use App\Http\Livewire\Admin\AdminTeamComponent;
 use App\Http\Livewire\Admin\AdminGaleryComponent;
 use App\Http\Livewire\Admin\AdminWhatDoingComponent;
 use App\Http\Livewire\Admin\AdminNotificationComponent;
+use App\Http\Livewire\Admin\Human\AdminHumanComponent;
 
 use App\Http\Livewire\Admin\Galery\GaleryAddComponent;
 use App\Http\Livewire\Admin\Galery\GaleryEditComponent;
 use App\Http\Livewire\Admin\Galery\Category\AdminGaleryCategoryAddComponent;
 use App\Http\Livewire\Admin\Galery\Category\AdminGaleryCategoryEditComponent;
+use App\Http\Livewire\Admin\Galery\Image\AdminImageAddComponent;
+use App\Http\Livewire\Admin\Galery\Image\AdminImageEditComponent;
 
 
 use App\Http\Livewire\Admin\Quaestion\QuestionAddComponent;
@@ -236,6 +239,10 @@ Route::get('/admin/slider/edit/{slider_id}' , SliderEditComponent::class)->name(
 Route::get('/admin/galery/category/add' , AdminGaleryCategoryAddComponent::class)->name('admin.galery.cagetory.add');
 Route::get('/admin/galery/category/edit/{category_id}' , AdminGaleryCategoryEditComponent::class)->name('admin.galery.cagetory.edit');
 
+Route::get('/admin/galery/add/title' , AdminImageAddComponent::class)->name('admin.galery.image.add');
+Route::get('/admin/galery/edit/title/{category_id}' , AdminImageEditComponent::class)->name('admin.galery.image.edit');
+
+
 
 Route::get('/admin/settings' , AdminSettingComponent::class)->name('admin.setting');
 Route::get('/admin/settings/edit/{setting_id}' , SettingEditComponent::class)->name('admin.setting.edit');
@@ -248,6 +255,7 @@ Route::get('/admin/about/edit/{about_id}' , AboutEditComponent::class)->name('ad
 // Admin Blog 
 
 Route::get('/admin/blog' , AdminBlogComponent::class)->name('admin.blog');
+Route::get('/admin/is-basvurulari' , AdminHumanComponent::class)->name('admin.human');
 
 // Bildirimler
 Route::get('/admin/notification' , AdminNotificationComponent::class)->name('admin.notification');

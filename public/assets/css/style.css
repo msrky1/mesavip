@@ -6699,10 +6699,10 @@ footer.style-2 .footer-top.dark-view * {
 .float-basvuru{
 	position:fixed;
 	
-	bottom:770px;
+	bottom:700px;
   right: 40px;
 	
-  /* margin-top: 25px; */
+  margin-top: 25px; 
 
   z-index:1000;
 }
@@ -6713,6 +6713,7 @@ footer.style-2 .footer-top.dark-view * {
   background-color: #302783;
   width: 100px;
   border-radius: 5px;
+
   /* height: 50px; */
   
 

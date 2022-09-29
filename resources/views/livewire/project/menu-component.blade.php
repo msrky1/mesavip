@@ -42,7 +42,14 @@
                                 <ul class="lab-ul">
                                     <li><a href="/ekibimiz">Kadromuz</a></li>
                                     <li><a href="/hakkimizda">Misyon ve Vizyonumuz</a></li>
-                                     <li><a href="/insan-kaynaklari">İnsan Kaynakları</a></li> 
+                          
+                                     <li>
+                                        <a href="#0">İnsan Kaynakları</a>
+                                        <ul class="lab-ul">
+                                            <li><a href="/insan-kaynaklari">İş Başvurusu</a></li>
+                                      
+                                        </ul>
+                                    </li>
                                     <li><a href="/belge-ve-sertifikalarımız">Belge ve Sertifikalarımız</a></li>
 
                                 </ul>
@@ -120,7 +127,7 @@
                                     @endforeach
                                 
 
-                                    {{-- <li>
+                                   {{-- <li>
                                         <a href="#0">Shop Pages</a>
                                         <ul class="lab-ul">
                                             <li><a href="shop.html">Shop Page</a></li>
@@ -130,7 +137,7 @@
                                     </li>
                                     <li><a href="search-page.html">Search Page</a></li>
                                     <li><a href="search-none.html">Search None</a></li>
-                                    <li><a href="404.html">404</a></li> --}}
+                                    <li><a href="404.html">404</a></li>  --}}
                                 </ul>
                             </li>
                             <li><a href="/galeri">Galeri</a></li>

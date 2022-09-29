@@ -31,7 +31,7 @@ class HumanController extends Controller
 
            
         $request->file('cv')->store('public/cv');
-        $filename =    $request->cv->getClientOriginalName();
+        $filename =    $request->cv;
         $human->cv = $filename;
         $human->save();
 
