@@ -6,13 +6,16 @@ use Livewire\Component;
 use App\Models\Image;
 use App\Models\GaleryCategory;
 use Illuminate\Support\Str;
-
+use Carbon\Carbon;
+use Livewire\WithFileUploads; 
 class AdminImageAddComponent extends Component
 {
     public $name;
     public $slug;
+    public $image;
     public $category_id;
-
+    
+    use WithFileUploads;
     
  public function generateSlug(){
 
@@ -28,7 +31,10 @@ class AdminImageAddComponent extends Component
         $category->name = $this->name;
         $category->slug = $this->slug;
         $category->category_id = $this->category_id;
-        
+
+        $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();
+        $this->image->storeAs('public/galery/kapak', $imageName);
+        $category->image = $imageName; 
         $category->save();
    
 

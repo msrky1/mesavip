@@ -29,7 +29,17 @@
 
 
                                 <form wire:submit.prevent="save">
+                                    <div class="mb-3">
+                                        <label for="setting-input-3" class="form-label">Galeri Seçiniz</label>:
+                                        <select class="form-select" aria-label="Default select example"
+                                            wire:model="image_id" required >
+                                            <option selected>Galeri</option>
+                                            @foreach ($image as $cat)
+                                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                            @endforeach
+                                        </select>
 
+                                    </div>
                                   
 
                                     <input type="file" wire:model="images" required multiple>

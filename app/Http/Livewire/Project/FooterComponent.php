@@ -8,7 +8,9 @@ use App\Models\Whatdo;
 use App\Models\Setting;
 use App\Models\Blog;
 use App\Models\Galery;
+use App\Models\Scholarship;
 use Carbon\Carbon;
+
 
 class FooterComponent extends Component
 {
@@ -26,7 +28,7 @@ class FooterComponent extends Component
         $blog = Blog::orderBy('id' , 'DESC')->paginate('6');
   
         $about = About::all();
-     
+        $scholarship = Scholarship::all();
 
         return view('livewire.project.footer-component', [
 
@@ -41,6 +43,7 @@ class FooterComponent extends Component
              'galery' => $galery, 
               
              'blog' => $blog,
+             'scholarship' => $scholarship,
       
         ]);
     }

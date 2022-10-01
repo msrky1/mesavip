@@ -143,7 +143,7 @@
                             <li><a href="/galeri">Galeri</a></li>
                             <li><a href="/iletisim">İletişim</a></li>
                             <li>
-                                <a href="#0">Eğitim Birimleri</a>
+                                <a href="#0">Şubeler</a>
                                 <ul class="lab-ul">
                             
                                         

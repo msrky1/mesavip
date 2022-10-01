@@ -7,6 +7,7 @@ use File;
 use Livewire\WithFileUploads; 
 use Carbon\Carbon;
 use App\Models\Galery;
+use App\Models\Image;
 use App\Models\GaleryCategory;
 class GaleryAddComponent extends Component
 { 
@@ -15,15 +16,12 @@ class GaleryAddComponent extends Component
     use WithFileUploads;
 
     public $images = [];
-   
+    public $image_id;
 
 
      public function save() {
+     
 
-
-        
-
-         
         $this->validate([
             'images.*' => 'image|max:1024', // 1MB Max
         ]);
@@ -32,22 +30,18 @@ class GaleryAddComponent extends Component
         foreach ($this->images as $key => $image) {
 
             $this->images[$key] = $image->store('galery','public');
-         
 
-            
-            
+           $image_id = $this->image_id;
+             
+            Galery::create(['image' => $image->hashName() , 'image_id' => $image_id ]);
+           
 
-            Galery::create(['image' => $image->hashName() ]);
-         
+           
        
        
         }
 
     
-        
-        
-    
-
 
         session()->flash('message' , 'Resimleriniz Galeriye Eklendi!');
         
@@ -55,9 +49,10 @@ class GaleryAddComponent extends Component
               
     public function render()
     {
-
+        
+        $image = Image::all();
         $category = GaleryCategory::all();
 
-        return view('livewire.admin.galery.galery-add-component' , ['category' => $category])->layout('layouts.admin');
+        return view('livewire.admin.galery.galery-add-component' , ['category' => $category , 'image' => $image])->layout('layouts.admin');
     }
 }

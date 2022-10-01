@@ -14,6 +14,8 @@ class AdminBlogComponent extends Component
     public function deleteBlog($id)
 
     {
+
+        
         $blog = Blog::find($id);    
         File::Delete('storage/blog/'.$blog->image);
         $blog->delete();

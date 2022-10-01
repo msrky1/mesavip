@@ -57,7 +57,15 @@
                                         </select>
 
                                     </div>
-                                   
+                                    <div class="mb-3">
+
+                                        <input type="file" name="image" wire:model="image" required /><br>
+
+                                        @if ($image)
+                                            <img src="{{ $image->temporaryUrl() }}" width="120">
+                                        @endif
+
+                                    </div>
 
                                     <button class="btn app-btn-primary" type="submit">
                                         Kaydet

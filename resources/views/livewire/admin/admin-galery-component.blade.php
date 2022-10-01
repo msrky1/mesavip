@@ -98,7 +98,7 @@
 
                 <div class="row g-3 mb-4 align-items-center justify-content-between">
                     <div class="col-auto">
-                        <h1 class="app-page-title mb-0">Galeri Kategorisi</h1>
+                     
                     </div>
 
                 </div>
@@ -113,7 +113,7 @@
                 </div>
                 @if (Session::has('message'))
                     <div class="alert alert-success">
-                        <strong>{{ Session::get('message') }}</strong>
+                        <strong>{{ Session::get('message-2') }}</strong>
                     </div>
                 @endif
                 <div class="tab-content" id="orders-table-tab-content">
@@ -129,7 +129,9 @@
                                             <tr>
                                                 <th class="cell">Galeri Adı</th>
                                                 <th class="cell">Uzantısı</th>
+                                                <th class="cell">Kapak</th>
                                                 <th class="cell">İşlemler</th>
+
                                                 
 
                                             </tr>
@@ -143,14 +145,17 @@
                                                 
                                              
                                                     <td class="cell">{{ $b->slug }}</td>
+                                                    <td class="cell"><img width="150px"
+                                                        src="{{ asset('storage/galery/kapak') }}/{{ $b->image }}"
+                                                        alt="{{ $b->title }}"></td>
                                                 
                                                     <td class="cell"><a class="btn-sm app-btn-secondary"
                                                             href="{{ route('admin.galery.image.edit', ['category_id' => $b->id]) }}">Düzenle
 
                                                         </a>
-                                                     {{--    <a href="#" class="btn-sm app-btn-success"
-                                                            wire:click.prevent="deleteBlog({{ $b->id }})">
-                                                            Sil </a> --}}
+                                                 <a href="#" class="btn-sm app-btn-success"
+                                                            wire:click.prevent="deleteImage({{ $b->id }})">
+                                                            Sil </a> 
                                                     </td>
                                                 </tr>
                                             @endforeach

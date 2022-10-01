@@ -44,13 +44,23 @@
                                             @enderror </div>
 
                                     </div>
+                                    <div class="mb-3">
+                                        <input type="file" name="image" wire:model="newimage" />
+                                    </div>
+                                    <div class="mb-3">
 
+                                        @if ($newimage)
+                                            <img src="{{ $newimage->temporaryUrl() }}" width="250">
+                                        @else
+                                            <img src="{{ asset('storage/galery/kapak') }}/{{ $image }}" width="250">
+                                        @endif
+                                    </div>
                                   
                                     <div class="mb-3">
                                         <label for="setting-input-3" class="form-label">Kategoriler</label>:
                                         <select class="form-select" aria-label="Default select example"
                                             wire:model="category_id">
-                                            <option selected>Kategori Seçin</option>
+                                          
                                             @foreach ($category as $cat)
                                                 <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                                             @endforeach

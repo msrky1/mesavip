@@ -20,7 +20,7 @@ use App\Models\SocialCategory;
 use Carbon\Carbon;
 use App\Models\Classroom;
 use App\Models\Lock;
-
+use App\Models\Scholarship;
 
 
 
@@ -45,6 +45,7 @@ class HomeComponent extends Component
         $category = SocialCategory::all();
         $lock = Lock::all();
         $unit = Unit::all();
+        
 
         return view('livewire.project.home-component', 
         
@@ -65,8 +66,10 @@ class HomeComponent extends Component
            'class' => $class,
            'lock' => $lock,
            'unit' => $unit,
+           'unit' => $unit,
 
            'questions' => $question
+        
 
         
         

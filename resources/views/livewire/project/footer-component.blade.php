@@ -114,3 +114,29 @@
         </div>
     </div>
 </footer>
+
+@foreach ($scholarship as $item)
+    
+@if ($item->durum  ==  "açık")
+    
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="{{$item->url}}"
+    class="float-basvuru" target="_blank">
+    <div class="count-item">
+        <div class="count-inner">
+        <div class="my-float-basvuru"><h6 style="color: aliceblue;"> Bursluluk Başvurusu </h6> </div>
+            
+            <div class="count-icon">
+            
+                <i class="icofont-graduate-alt "></i>
+               
+              
+            </div>
+                          
+        </div>
+    </div>
+</a>
+@endif
+@endforeach

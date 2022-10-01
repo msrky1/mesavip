@@ -12,12 +12,25 @@ use File;
 class AdminGaleryComponent extends Component
 {
  
+    
+    public function deleteImage($id)
+
+    {
+        $galery = Image::find($id);
+        File::Delete('storage/galery/kapak/'.$galery->image);
+        $galery->delete();
+       session()->flash('message-2' , 'Galery Başarıyla Slindi!');
+    
+    
+        
+
+    }
 
     public function deleteGalery($id)
 
     {
         $galery = Galery::find($id);
-        File::Delete('storage/galery/'.$galery->image);
+        File::Delete('storage/galery/kapak/'.$galery->image);
         $galery->delete();
       //  session()->flash('message' , 'Slider Başarıyla Slindi!');
     
