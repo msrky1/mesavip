@@ -13,7 +13,8 @@ class TeamEditComponent extends Component
     
     use WithFileUploads;
     public $name;
-    public $date_birth;
+    public $sira;
+
     public $newimage;
     public $lawyer_id; 
     public $about;
@@ -25,9 +26,10 @@ class TeamEditComponent extends Component
         $lawyer = Lawyer::where('id', $lawyer_id)->first();
         
         $this->name = $lawyer->name;
+        $this->sira = $lawyer->sira;
         $this->about = $lawyer->about;
         $this->pozition = $lawyer->pozition;
-        $this->date_birth = $lawyer->date_birth;
+   
         $this->image = $lawyer->image;
         $this->lawyer_id = $lawyer->id;
         
@@ -41,7 +43,7 @@ class TeamEditComponent extends Component
             $lawyer->name = $this->name;
             $lawyer->about = $this->about;
             $lawyer->pozition = $this->pozition;
-            $lawyer->date_birth = $this->date_birth;
+
       
             
        if ($this->newimage){

@@ -13,8 +13,8 @@ class TeamAddComponent extends Component
  
     use WithFileUploads;
     public $name; 
+    public $sira; 
     public $about;
-    public $date_birth;
     public $image;
     public $pozition;
 
@@ -23,9 +23,10 @@ class TeamAddComponent extends Component
 
         $lawyer = new Lawyer();
         $lawyer->name = $this->name;
+        $lawyer->sira = $this->sira;
         $lawyer->about = $this->about;
         $lawyer->pozition = $this->pozition;
-        $lawyer->date_birth = $this->date_birth;
+    
 
 
         $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();

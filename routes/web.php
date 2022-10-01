@@ -9,6 +9,7 @@ use App\Http\Livewire\Project\HomeComponent;
 use App\Http\Livewire\Project\BlogComponent;
 use App\Http\Livewire\Project\AboutComponent;
 use App\Http\Livewire\Project\GaleryComponent;
+use App\Http\Livewire\GaleryDetailComponent;
 use App\Http\Livewire\Project\WhatdoComponent;
 use App\Http\Controllers\HumanController;
 use App\Http\Livewire\Project\CertificaComponent;
@@ -213,6 +214,7 @@ Route::get('/sss' , QuestionsComponent::class);
 
 
 
+  Route::get('/galery/{slug}', GaleryDetailComponent::class)->name('galery.detail');
 
 
 
@@ -246,7 +248,7 @@ Route::get('/admin/galery/category/add' , AdminGaleryCategoryAddComponent::class
 Route::get('/admin/galery/category/edit/{category_id}' , AdminGaleryCategoryEditComponent::class)->name('admin.galery.cagetory.edit');
 
 Route::get('/admin/galery/add/title' , AdminImageAddComponent::class)->name('admin.galery.image.add');
-Route::get('/admin/galery/edit/title/{category_id}' , AdminImageEditComponent::class)->name('admin.galery.image.edit');
+Route::get('/admin/galery/edit/title/{blog_id}' , AdminImageEditComponent::class)->name('admin.galery.image.edit');
 
 
 

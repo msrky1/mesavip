@@ -2,6 +2,7 @@
     <div class="app-wrapper">
 
         <div class="app-content pt-3 p-md-3 p-lg-4">
+         
             <div class="container-xl">
                 <a href="{{route('admin.team.add')}}" class="btn app-btn-primary">Ekle</a>
                 <h1 class="app-page-title">Ekibim</h1>
@@ -12,10 +13,11 @@
 
                 <!--//row-->
 
-
+      
 
       
                 <div class="row g-4 mb-4">
+                    {{ $lawyer->links() }}
                     @foreach ($lawyer as $law)
                         
                 
@@ -84,8 +86,9 @@
                         
                         <!--//app-card-->
                     </div>
+                    
                     @endforeach
-
+                 
                 </div>
           
                 <!--//row-->
@@ -95,4 +98,5 @@
             <!--//container-fluid-->
         </div>
         <!--//app-content-->
+      
 </main>

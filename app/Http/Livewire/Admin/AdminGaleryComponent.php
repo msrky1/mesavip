@@ -46,6 +46,7 @@ class AdminGaleryComponent extends Component
         $category = GaleryCategory::all();
         
         $galery = Galery::all();
+        
         $image = Image::all();
 
 

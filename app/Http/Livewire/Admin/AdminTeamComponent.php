@@ -24,7 +24,7 @@ class AdminTeamComponent extends Component
     public function render()
     { 
 
-        $lawyer = Lawyer::all();
+        $lawyer = Lawyer::orderBy('sira' , 'ASC')->simplePaginate(5);
         return view('livewire.admin.admin-team-component' , ['lawyer' => $lawyer])->layout('layouts.admin');
     }
 }

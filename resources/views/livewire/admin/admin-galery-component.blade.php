@@ -130,6 +130,7 @@
                                                 <th class="cell">Galeri Adı</th>
                                                 <th class="cell">Uzantısı</th>
                                                 <th class="cell">Kapak</th>
+                                                <th class="cell">Kategori</th>
                                                 <th class="cell">İşlemler</th>
 
                                                 
@@ -148,11 +149,13 @@
                                                     <td class="cell"><img width="150px"
                                                         src="{{ asset('storage/galery/kapak') }}/{{ $b->image }}"
                                                         alt="{{ $b->title }}"></td>
+                                                        <td class="cell">{{ $b->getGalery->name }}</td>
                                                 
                                                     <td class="cell"><a class="btn-sm app-btn-secondary"
-                                                            href="{{ route('admin.galery.image.edit', ['category_id' => $b->id]) }}">Düzenle
+                                                            href="{{ route('admin.galery.image.edit', ['blog_id' => $b->id]) }}">Düzenle
 
                                                         </a>
+                                                        
                                                  <a href="#" class="btn-sm app-btn-success"
                                                             wire:click.prevent="deleteImage({{ $b->id }})">
                                                             Sil </a> 

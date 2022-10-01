@@ -20,35 +20,66 @@
 
 
 <!-- blog section start here -->
-<div class="shop-page padding-tb">
-    <div class="container">
-        <div class="row">
-           
-                    @foreach ($galery as $item)
-                        <div class="col-sm-6 col-md-4 col-lg-3 item">
 
+    <!-- course section start here -->
 
-                            <a href="{{ asset('storage') }}/galery/{{ $item->image }}" data-lg-lightbox="photos">
-                                <img alt="img1" src="{{ asset('storage') }}/galery/{{ $item->image }}" />
-                            </a>
-                        </div>
-                    @endforeach
+ 
+    <div class="course-section style-3 padding-tb">
+        <div class="course-shape one"><img src="assets/images/shape-img/icon/01.png" alt="education"></div>
+        <div class="course-shape two"><img src="assets/images/shape-img/icon/02.png" alt="education"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">Mesa Vip Galeri</h2>
+        
+                <div class="course-filter-group">
+                    <ul class="lab-ul">
+                        <li class="active" data-filter="*">Hepsi</li>
+                        @foreach ($category as $cat)
+                            
+               
+                        <li data-filter=".{{$cat->id}}">{{$cat->name}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 course-filter">
+
+                    @foreach ($image as $item)
+                        
                 
-            
+                    <div class="col {{ $item->getGalery->id }}">
+                        <div class="course-item style-4">
+                            <div class="course-inner">
+                                <div class="course-thumb">
+                                    <img src="{{asset('storage/galery/kapak')}}/{{$item->image}}" alt="course">
+                                    <div class="course-category">
+                                        <div class="course-cate">
+                                            <a href="#">{{$item->getGalery->name}}</a>
+                                        </div>
+                                        <div class="course-reiew">
+                                            <span class="ratting">
+                                                <i class="icofont-ui-rating"></i>
+                                                <i class="icofont-ui-rating"></i>
+                                                <i class="icofont-ui-rating"></i>
+                                                <i class="icofont-ui-rating"></i>
+                                                <i class="icofont-ui-rating"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <a href="{{route('galery.detail' , $item->slug )}}"><h5>{{$item->name}}</h5></a>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-        <script type="text/javascript">
-            lightGallery(document.getElementById('lightgallery'), {
-                plugins: [lgZoom, lgThumbnail],
-                licenseKey: 'your_license_key',
-                speed: 500,
-                // ... other settings
-            });
-        </script>
-
-
-
     </div>
 </div>
 <!-- blog section ending here -->

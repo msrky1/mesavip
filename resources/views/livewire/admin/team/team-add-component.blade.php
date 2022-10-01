@@ -43,8 +43,8 @@
 
                                     <div class="mb-3">
 
-                                        <label for="setting-input-2" class="form-label">Doğum Tarihi </label>:
-                                        <input type="text" placeholder="örn.(1995-01-23)" name="date_birth" class="form-control" wire:model="date_birth"
+                                        <label for="setting-input-2" class="form-label">Sıra </label>:
+                                        <input type="text" placeholder="Sırası" name="sira" class="form-control" wire:model="sira"
                                             required>
 
 

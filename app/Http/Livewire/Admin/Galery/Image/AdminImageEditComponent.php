@@ -15,18 +15,20 @@ class AdminImageEditComponent extends Component
     public $image;
     public $newimage;
     public $slug;
+    public $blog_id;
     public $category_id;
 
     use WithFileUploads;
 
-    public function mount ($category_id) {
+    public function mount ($blog_id) {
            
-        $category = Image::where('id' , $category_id)->first();
+        $category = Image::where('id' , $blog_id)->first();
 
         $this->name = $category->name;
         $this->image = $category->image;
         $this->slug = $category->slug;
-        $this->category_id = $category->id;
+        $this->category_id = $category->category_id;
+        $this->blog_id = $category->id;
 
 
 
@@ -43,8 +45,9 @@ class AdminImageEditComponent extends Component
      public function updateCategory() {
 
 
-            $category = Image::find($this->category_id);
+            $category = Image::find($this->blog_id);
             $category->name = $this->name;
+            $category->category_id = $this->category_id;
             $category->slug = $this->slug;
             if ($this->newimage){
                 $imageName = Carbon::now()->timestamp. '.' . $this->newimage->extension();
