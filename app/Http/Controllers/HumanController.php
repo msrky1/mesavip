@@ -24,6 +24,7 @@ class HumanController extends Controller
         $human->name = $request->name;
         $human->email = $request->email;
         $human->number = $request->number;
+        $human->description = $request->description;
         $human->area = $request->area;
         $human->branch = $request->branch;
         

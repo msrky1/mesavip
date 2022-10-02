@@ -188,10 +188,7 @@
                 @endforeach
 
             </div>
-            {{-- <div class="text-center mt-5">
-                <a href="course.html" class="lab-btn"><span>Browse All Categories</span></a>
-            </div> --}}
-        </div>
+           
     </div>
 </div>
 <!-- category section start here -->
@@ -234,7 +231,7 @@
                                         </span> --}}
                                     </div>
                                 </div>
-                                <a href="course-single.html"><h5>{{$b->title}}</h5></a>
+                                <a href="{{ route('blog.detail', $b->slug) }}"><h5>{{$b->title}}</h5></a>
                                 {{-- <div class="course-details">
                                     <div class="couse-count"><i class="icofont-video-alt"></i> 18x Lesson</div>
                                     <div class="couse-topic"><i class="icofont-signal"></i> Online Class</div>
@@ -254,8 +251,8 @@
                 </div>
                
                 @endforeach
-
-            </div>
+               
+         
         </div>
     </div>
 </div>
@@ -263,6 +260,7 @@
 @endif
     
 @endforeach
+
 <!-- course section ending here -->
 
 
@@ -313,58 +311,69 @@
         </div>
     </div>
 </div>
-<!-- about section ending here -->
 
 
 <!-- Instructors Section Start Here -->
-<div class="instructor-section padding-tb section-bg">
+<div class="blog-section padding-tb section-bg">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">KADROMUZ</span>
-            <h2 class="title">Alanında Uzman Eğitmenlerimiz</h2>
+            <span class="subtitle">MESA VİP HABERLER</span>
+            <h2 class="title">Mesa Vip Eğitim Kurumları Bizden Haberler</h2>
         </div>
         <div class="section-wrapper">
-            <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                @foreach ($team as $t)
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center g-4">
+
+                @foreach ($blog as $u)
                     
                 <div class="col">
-                    <div class="instructor-item">
-                        <div class="instructor-inner">
-                            <div class="instructor-thumb">
-                                <img src="{{asset('storage')}}/team/{{$t->image}}" alt="instructor">
+                    <div class="post-item">
+                        <div class="post-inner">
+                            <div class="post-thumb">
+                                <a href="/"><img src="{{asset('storage')}}/blog/{{$u->image}}" alt="{{$u->title}}"></a>
                             </div>
-                            <div class="instructor-content">
-                                <a href="team-single.html"><h4>{{$t->name}}</h4></a>
-                                <p>{{$t->about}}</p>
-                               
+                            <div class="post-content">
+                                <a href="{{ route('blog.detail', $u->slug) }}"><h4>{{$u->title}}</h4></a>
+                                <div class="meta-post">
+                                    <ul class="lab-ul">
+                                        <li><i class="icofont-ui-user"></i>Admin</li>
+                                        {{-- <li><i class="icofont-calendar"></i>April 23,2021</li> --}}
+                                    </ul>
+                                </div>
+                                <p> {!! $u->description = Str::limit($u->description, 200) !!} </p>
+                            </div>
+                            <div class="post-footer">
+                                <div class="pf-left">
+                                    <a href="{{ route('blog.detail', $u->slug) }}" class="lab-btn-text">Detay <i class="icofont-external-link"></i></a>
+                                </div>
+                                {{-- <div class="pf-right">
+                                    <i class="icofont-comment"></i>
+                                    <span class="comment-count">3</span>
+                                </div> --}}
                             </div>
                         </div>
-                        {{-- <div class="instructor-footer">
-                            <ul class="lab-ul d-flex flex-wrap justify-content-between align-items-center">
-                                <li><i class="icofont-book-alt"></i> 08 courses</li>
-                                <li><i class="icofont-users-alt-3"></i> 30 students</li>
-                            </ul>
-                        </div> --}}
                     </div>
                 </div>
                 @endforeach
 
+                
             </div>
-            {{-- <div class="text-center footer-btn">
-                <p>Want to help people learn, grow and achieve more in life?<a href="team.html">Become an instructor</a></p>
-            </div> --}}
+        </div>
+        <div class="text-center mt-5">
+            <a href="/haberler" class="lab-btn"><span>Tüm Haberler</span></a>
+  
+    </div>
         </div>
     </div>
 </div>
-<!-- Instructors Section Ending Here -->
+<!-- blog section ending here -->
 
 
 <!-- student feedbak section start here -->
     <div class="student-feedbak-section padding-tb shape-img">
     <div class="container">
         <div class="section-header text-center">
-            <span class="subtitle">Sık Sourulan Sorular</span>
-            <h2 class="title">Mesa Vip Eğitim Kurumları Sık Sorulan Sorular   </h2>
+            <span class="subtitle">SOSYAL ETKİNLİKLER</span>
+            <h2 class="title">Mesa Vip Eğitim Kurumları Sosyal Etkinlikler   </h2>
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center row-cols-lg-2 row-cols-1">
@@ -378,7 +387,7 @@
                         
                     </div>
                 </div>
-                @foreach ($questions as $q)
+                @foreach ($social as $q)
                     
                 <div class="col">
                     <div class="stu-feed-item">
@@ -386,12 +395,12 @@
                             <div class="stu-feed-top">
                                 <div class="sft-left">
                                     <div class="sftl-thumb">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-question-fill" viewBox="0 0 16 16">
-                                            <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0v6z"/>
                                           </svg>
                                     </div>
                                     <div class="sftl-content">
-                                        <a href="#"><h6>{{$q->title}}</h6></a>
+                                        <a href="{{route('social.detail' , [ $q->slug ])}}"><h6>{{$q->title}}</h6></a>
                                         <span>Mesa Vip</span>
                                     </div>
                                 </div>
@@ -403,7 +412,7 @@
                         </div>
                     </div>
                     @endforeach 
-
+                    
                 </div>
             </div>
         </div>
@@ -484,7 +493,7 @@
                                 </div> --}}
                                 <div class="achieve-content">
                                     <h4>Bize Ulaşın</h4>
-                                    <p>Bizlere Whatsapp ve iletişim numaralarımızdan dilediğiniz zaman ulaşabilirsiniz.</p>
+                                    <p>Bizlere  iletişim numaralarımızdan  ulaşabilirsiniz.</p>
                                     <a href="/iletisim" class="lab-btn"><span>Şimdi İletişime Geçin</span></a>
                                 </div>
                             </div>

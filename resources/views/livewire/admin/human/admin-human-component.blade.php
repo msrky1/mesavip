@@ -37,6 +37,7 @@
                                                 <th class="cell">Telefon Numarası</th>
                                                 <th class="cell">Alanı</th>
                                                 <th class="cell">Branşı</th>
+                                                <th class="cell">Mesajı</th>
                                                 <th class="cell">Cv'si</th>
                                                 <th class="cell">Tarih</th>
                                                 <th class="cell">Aksiyonlar</th>
@@ -58,6 +59,7 @@
                                                     <td class="cell">{{ $b->number }}</td>
                                                     <td class="cell">{{ $b->area }}</td>
                                                     <td class="cell">{{ $b->branch }}</td>      
+                                                    <td class="cell">{{ $b->description }}</td>      
                                                     <td class="cell"><a href="{{asset('storage\cv')}}\{{$b->cv}}"> CV </a></td>
                                                     <td class="cell">{{ $b->created_at }}</td>
 
@@ -71,7 +73,9 @@
 
                                         </tbody>
                                     </table>
+                                  
                                 </div>
+                                {{ $human->links() }}   
                                 <!--//table-responsive-->
 
                             </div>

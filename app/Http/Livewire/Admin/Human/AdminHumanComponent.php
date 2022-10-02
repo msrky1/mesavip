@@ -21,7 +21,7 @@ class AdminHumanComponent extends Component
     }
     public function render()
     {
-        $human = Human::orderBy('id' , 'DESC')->paginate(10);
+        $human = Human::orderBy('id' , 'DESC')->simplePaginate(15);
         return view('livewire.admin.human.admin-human-component' , ['human' => $human])->layout('layouts.admin');
     }
 }

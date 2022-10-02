@@ -5,10 +5,11 @@ namespace App\Http\Livewire\Admin\Galery\Image;
 use Livewire\Component;
 use App\Models\GaleryCategory;
 use App\Models\Image;
+use App\Models\Galery;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Livewire\WithFileUploads;
-
+use File;
 class AdminImageEditComponent extends Component
 {
     public $name;
@@ -35,7 +36,18 @@ class AdminImageEditComponent extends Component
 
 
     }
+    public function deleteGalery($id)
 
+    {
+        $galery = Galery::find($id);
+        File::Delete('storage/galery/'.$galery->image);
+        $galery->delete();
+       session()->flash('message-2' , 'Galery Başarıyla Slindi!');
+    
+    
+        
+
+    }
     
     public function generateSlug(){
 
@@ -65,7 +77,11 @@ class AdminImageEditComponent extends Component
     public function render()
 
     {
+
+
+
+        $galery = Image::where('slug', $this->slug)->first();
         $category = GaleryCategory::all();
-        return view('livewire.admin.galery.image.admin-image-edit-component' ,  ['category' => $category])->layout('layouts.admin');
+        return view('livewire.admin.galery.image.admin-image-edit-component' ,  ['category' => $category , 'galery' => $galery])->layout('layouts.admin');
     }
 }

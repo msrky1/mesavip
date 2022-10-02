@@ -75,8 +75,7 @@
                     <div class="col-xl-8 col-lg-7 col-12">
                         <div class="map-area">
                             <div class="maps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2275990948147!2d90.38698831543141!3d23.739261895117753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c740f17d1%3A0xdd3daab8c90eb11f!2sCodexCoder!5e0!3m2!1sen!2sbd!4v1607313671993!5m2!1sen!2sbd" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                            </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3161.1827940304834!2d36.82832394845146!3d37.59785674269595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x711524bdfd0c3c0e!2sMesavip!5e0!3m2!1str!2str!4v1664741478356!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            </div>
                         </div>
                     </div>
                 </div>

@@ -243,7 +243,7 @@
 
 
                 <!-- Gallery -->
-                <div class="row">
+                {{-- <div class="row">
 
                     @foreach ($galery as $item)
                         <div class="col-lg-4 ">
@@ -265,10 +265,10 @@
 
 
 
-                </div>
+                </div> --}}
                 <!-- Gallery -->
 
-                <div class="text-center mt-4"><a class="btn app-btn-secondary" href="#">Web Sitesinde Görüntüle</a>
+                <div class="text-center mt-4"><a class="btn app-btn-secondary" href="/galeri">Web Sitesinde Görüntüle</a>
                 </div>
 
             </div>

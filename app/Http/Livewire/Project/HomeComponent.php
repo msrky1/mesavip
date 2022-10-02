@@ -15,6 +15,7 @@ use App\Models\Setting;
 use App\Models\About;
 use App\Models\Social;
 use App\Models\Unit;
+
 use App\Models\Whatdo;
 use App\Models\SocialCategory;
 use Carbon\Carbon;
@@ -44,7 +45,8 @@ class HomeComponent extends Component
         $class = Classroom::all();
         $category = SocialCategory::all();
         $lock = Lock::all();
-        $unit = Unit::all();
+        $social = Social::orderBy('id' , 'ASC')->paginate('10');
+        $unit = Unit::orderBy('id' , 'ASC')->paginate('10');
         
 
         return view('livewire.project.home-component', 
@@ -66,7 +68,7 @@ class HomeComponent extends Component
            'class' => $class,
            'lock' => $lock,
            'unit' => $unit,
-           'unit' => $unit,
+           'social' => $social,
 
            'questions' => $question
         
